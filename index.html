@@ -96,7 +96,7 @@ select.form-input{color:var(--text)}
 select.form-input option{background:var(--s2)}
 
 /* ── HOME HERO ─────────────────────────────────── */
-.home-top{background:var(--lime);color:#fff;padding:16px 16px 18px;border-bottom:none;display:flex;align-items:center;gap:10px;border-radius:0 0 28px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.home-top{background:var(--lime);color:#fff;padding:16px 16px 18px;border-bottom:none;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:0 0 28px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
 .ht-logo{width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;letter-spacing:.5px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-style:italic;flex-shrink:0;box-shadow:0 0 0 2.5px rgba(255,255,255,.2);transition:box-shadow .4s}
 .ht-logo.sync-on{box-shadow:0 0 0 2.5px rgba(255,255,255,.9)}
 .ht-logo.sync-err{box-shadow:0 0 0 2.5px rgba(220,80,80,.85)}
@@ -703,7 +703,7 @@ function getViewData(p,date){
     if(date===today()){
       p.days[date]={weight:{done:false,mins:0},cardio:{done:false,mins:0},water:false,food:[],xpEarned:0,coinsEarned:0};
     }else{
-      return{weight:{done:false,mins:0},cardio:{done:false,mins:0},water:false,food:[]};
+      p.days[date]={weight:{done:false,mins:0},cardio:{done:false,mins:0},water:false,food:[]};
     }
   }
   return p.days[date];
