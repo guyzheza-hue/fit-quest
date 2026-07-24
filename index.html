@@ -7,6 +7,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#EDE8DF">
 <title>FitQuest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
 :root{
@@ -16,7 +18,7 @@
   --text:#252420;--t2:#8A857C;--t3:#C0BAB2;
   --st:env(safe-area-inset-top,20px);--sb:env(safe-area-inset-bottom,20px);
 }
-body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);min-height:100dvh;max-width:430px;margin:0 auto;overflow-x:hidden}
+body{font-family:'Nunito',-apple-system,'Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);min-height:100dvh;max-width:430px;margin:0 auto;overflow-x:hidden}
 .screen{display:none;min-height:100dvh;padding-bottom:calc(58px + var(--sb))}
 .screen.active{display:block}
 
@@ -36,14 +38,14 @@ body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:var(--bg);
 .ps-logo{margin-bottom:40px}
 .ps-logo-title{font-size:36px;font-weight:900;letter-spacing:-1px;color:var(--lime);font-family:Georgia,'Times New Roman',serif;font-style:italic}
 .ps-logo-sub{font-size:11px;color:var(--t2);margin-top:4px;letter-spacing:.8px;text-transform:uppercase}
-.profile-card{border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;margin-bottom:8px;transition:all .15s;background:var(--s1)}
+.profile-card{border:1px solid var(--line);border-radius:22px;padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;margin-bottom:8px;transition:all .15s;background:var(--s1)}
 .profile-card:active{border-color:var(--lime);transform:scale(.99)}
 .pc-avatar{font-size:22px;width:36px;text-align:center;flex-shrink:0}
 .pc-info{flex:1}
 .pc-name{font-size:16px;font-weight:700;letter-spacing:-.3px}
 .pc-sub{font-size:11px;color:var(--t2);margin-top:2px}
 .pc-badge{font-size:10px;font-weight:800;color:var(--lime);letter-spacing:.3px}
-.add-profile-btn{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed var(--t3);border-radius:14px;padding:14px;color:var(--t2);font-size:14px;cursor:pointer;margin-top:4px;font-weight:600}
+.add-profile-btn{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed var(--t3);border-radius:22px;padding:14px;color:var(--t2);font-size:14px;cursor:pointer;margin-top:4px;font-weight:700}
 
 /* ── SETUP ─────────────────────────────────────── */
 #setup{min-height:100dvh;display:flex;flex-direction:column;padding:calc(var(--st)+16px) 20px calc(28px+var(--sb))}
@@ -54,41 +56,75 @@ body{font-family:-apple-system,'Helvetica Neue',sans-serif;background:var(--bg);
 .setup-title{font-size:26px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px;font-family:Georgia,'Times New Roman',serif;font-style:italic}
 .setup-sub{font-size:13px;color:var(--t2);margin-bottom:22px;line-height:1.5}
 .s-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
-.s-opt{background:var(--s1);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .15s}
+.s-opt{background:var(--s1);border:1.5px solid var(--line);border-radius:22px;padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .15s}
 .s-opt.on{border-color:var(--lime);background:rgba(61,82,64,.06)}
 .s-opt-icon{font-size:22px;width:28px;text-align:center}
 .s-opt-title{font-size:14px;font-weight:700}
 .s-opt-sub{font-size:11px;color:var(--t2);margin-top:2px}
 
 /* ── BUTTONS ───────────────────────────────────── */
-.btn{border:none;border-radius:12px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;width:100%;transition:opacity .15s;letter-spacing:.2px}
+.btn{border:none;border-radius:18px;padding:14px;font-size:15px;font-weight:800;cursor:pointer;width:100%;transition:opacity .15s;letter-spacing:.2px}
 .btn:active{opacity:.7}
 .btn-lime{background:var(--lime);color:#fff}
 .btn-outline{background:transparent;border:1.5px solid var(--line);color:var(--text)}
 .btn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.btn-sm{border:none;border-radius:10px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.3px;transition:opacity .15s}
+.btn-sm{border:none;border-radius:14px;padding:7px 14px;font-size:12px;font-weight:800;cursor:pointer;letter-spacing:.3px;transition:opacity .15s}
 .btn-sm:active{opacity:.7}
 
 /* ── FORM ──────────────────────────────────────── */
 .form-group{margin-bottom:12px}
-.form-lbl{font-size:9px;font-weight:700;color:var(--t2);margin-bottom:5px;display:block;letter-spacing:1px;text-transform:uppercase}
-.form-input{width:100%;background:var(--s2);border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;color:var(--text);font-size:16px;outline:none;-webkit-appearance:none}
+.form-lbl{font-size:9px;font-weight:800;color:var(--t2);margin-bottom:5px;display:block;letter-spacing:1px;text-transform:uppercase}
+.form-input{width:100%;background:var(--s2);border:1.5px solid var(--line);border-radius:16px;padding:11px 14px;color:var(--text);font-size:16px;outline:none;-webkit-appearance:none;font-family:inherit}
 .form-input:focus{border-color:var(--lime)}
+
+/* ── CHART TABS ────────────────────────────────── */
+.chart-tabs{display:flex;gap:4px;background:rgba(0,0,0,.05);border-radius:20px;padding:3px;margin-bottom:12px}
+.chart-tab{flex:1;border:none;padding:6px 0;border-radius:16px;font-size:12px;font-weight:800;cursor:pointer;background:none;color:var(--t2);transition:all .2s;font-family:inherit;letter-spacing:.2px}
+.chart-tab.active{background:#fff;color:var(--lime);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+/* ── WEEKLY GOAL ───────────────────────────────── */
+.wgoal-row{background:var(--s1);border-radius:18px;padding:10px 14px;margin-top:10px}
+.wgoal-header{font-size:10px;font-weight:800;color:var(--t3);letter-spacing:.4px;text-transform:uppercase;margin-bottom:8px}
+.wgoal-cells{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.wgoal-cell{background:var(--bg);border-radius:12px;padding:8px 6px;text-align:center}
+.wgoal-cell-val{font-size:14px;font-weight:900;line-height:1.1;letter-spacing:-.3px}
+.wgoal-cell-lbl{font-size:10px;font-weight:700;color:var(--t3);margin-top:3px}
+
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .form-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 select.form-input{color:var(--text)}
 select.form-input option{background:var(--s2)}
 
 /* ── HOME HERO ─────────────────────────────────── */
-.home-top{background:var(--lime);color:#fff;padding:calc(var(--st)+18px) 20px 18px;border-bottom:none}
-.ht-greeting{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:3px;font-weight:500}
-.ht-name{font-size:26px;font-weight:900;letter-spacing:-.5px;margin-bottom:18px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-style:italic}
-.ht-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.hts-cell{text-align:center;padding:10px 0}
-.hts-cell+.hts-cell{border-left:1px solid rgba(255,255,255,.2)}
-.hts-val{font-size:28px;font-weight:900;letter-spacing:-1px;line-height:1;color:#fff}
-.hts-lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:4px}
-.hts-lime{color:#fff}
+.home-top{background:var(--lime);color:#fff;padding:16px 16px 18px;border-bottom:none;display:flex;align-items:center;gap:10px;border-radius:0 0 28px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.ht-logo{width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;letter-spacing:.5px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-style:italic;flex-shrink:0;box-shadow:0 0 0 2.5px rgba(255,255,255,.2);transition:box-shadow .4s}
+.ht-logo.sync-on{box-shadow:0 0 0 2.5px rgba(255,255,255,.9)}
+.ht-logo.sync-err{box-shadow:0 0 0 2.5px rgba(220,80,80,.85)}
+.ht-logo.sync-spin{animation:logo-ring 1.1s ease-in-out infinite}
+@keyframes logo-ring{0%,100%{box-shadow:0 0 0 2px rgba(255,210,60,.3)}50%{box-shadow:0 0 0 3px rgba(255,210,60,1)}}
+.ht-head-weight{background:rgba(255,255,255,.18);border-radius:20px;padding:4px 10px;font-size:13px;font-weight:900;color:#fff;letter-spacing:-.5px;white-space:nowrap}
+.home-stats{background:var(--s1);border-radius:18px;margin:8px 14px 0;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:stretch;box-shadow:0 4px 20px rgba(0,0,0,.1);position:relative;z-index:1}
+.ht-weight-box{background:var(--lime);border-radius:12px;padding:10px 14px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:72px}
+.hts-val{font-size:28px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:#fff}
+.hts-lbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:3px}
+.ht-wk-box{background:var(--bg);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;justify-content:center}
+.ht-bar-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.ht-bar-track{background:var(--line);border-radius:4px;height:6px;overflow:hidden}
+.ht-bar-fill{height:100%;border-radius:4px;transition:width .3s}
+.ht-wk-title{font-size:9px;font-weight:800;letter-spacing:.6px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:5px}
+.ht-wk-row{display:flex;align-items:center;justify-content:space-between;padding:2px 0;cursor:pointer}
+.ht-wk-left{font-size:11px;color:rgba(255,255,255,.75);font-weight:600}
+.ht-wk-right{font-size:12px;font-weight:900;color:#fff}
+.ht-wk-deficit{font-size:10px;font-weight:800;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.2)}
+/* ── WGOAL TARGET ROW ─────────────────────────── */
+.wgoal-target-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.wgoal-target-lbl{font-size:10px;font-weight:800;color:var(--t2);letter-spacing:.3px}
+.wgoal-target-val{font-size:13px;font-weight:900;color:var(--lime);cursor:pointer;display:flex;align-items:center;gap:4px}
+.wgoal-target-val input{width:56px;font-size:13px;font-weight:900;color:var(--lime);background:none;border:none;border-bottom:2px solid var(--lime);outline:none;font-family:inherit;text-align:right}
+.wgoal-target-eta{font-size:10px;color:var(--t2);font-weight:700}
+/* ── WEEKLY EX BADGE ─────────────────────────── */
+.wex-badge{font-size:10px;font-weight:800;color:var(--t2);margin-left:6px}
+.wex-goal-edit{cursor:pointer;border-bottom:1px dashed var(--t3);color:var(--lime)}
 
 /* ── XP BAR ────────────────────────────────────── */
 .xp-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
@@ -158,6 +194,12 @@ select.form-input option{background:var(--s2)}
 .sr-item{padding:10px 13px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
 .sr-item:last-child{border-bottom:none}
 .sr-item:active{background:var(--s2)}
+.recent-foods-wrap{padding:10px 20px 0;display:none}
+.recent-lbl{font-size:9px;font-weight:800;color:var(--t2);letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
+.recent-chips{display:flex;flex-wrap:wrap;gap:6px}
+.recent-chip{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;transition:background .15s;white-space:nowrap}
+.recent-chip:active{background:var(--line)}
+.rc-kcal{font-size:10px;font-weight:600;color:var(--t2)}
 .sr-name{font-size:14px;font-weight:600}
 .sr-unit{font-size:10px;color:var(--t2);margin-top:1px}
 .sr-kcal{font-size:13px;font-weight:900;color:var(--lime)}
@@ -234,7 +276,7 @@ select.form-input option{background:var(--s2)}
 /* ── MODAL ─────────────────────────────────────── */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:300;display:none;align-items:flex-end;justify-content:center}
 .modal.show{display:flex}
-.modal-sheet{background:var(--s1);border-radius:20px 20px 0 0;padding:14px 18px calc(18px+var(--sb));width:100%;max-width:430px;max-height:88dvh;overflow-y:auto}
+.modal-sheet{background:var(--s1);border-radius:28px 28px 0 0;padding:14px 20px calc(20px+var(--sb));width:100%;max-width:430px;max-height:88dvh;overflow-y:auto}
 .modal-handle{width:36px;height:4px;background:var(--t3);border-radius:2px;margin:0 auto 16px}
 .modal-title{font-size:18px;font-weight:900;margin-bottom:14px;font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--text)}
 
@@ -259,7 +301,7 @@ select.form-input option{background:var(--s2)}
 <div id="profileSelect">
   <div class="ps-logo">
     <div class="ps-logo-title">FitQuest</div>
-    <div class="ps-logo-sub">Fitness RPG Tracker</div>
+    <div class="ps-logo-sub">Fitness Tracker</div>
   </div>
   <div id="profileList"></div>
   <div class="add-profile-btn" onclick="startSetup()">＋ สร้างโปรไฟล์ใหม่</div>
@@ -284,44 +326,19 @@ select.form-input option{background:var(--s2)}
   <!-- HOME -->
   <div id="screenHome" class="screen active">
     <div class="home-top">
-      <div class="ht-greeting" id="homeDate"></div>
-      <div class="ht-name" id="homeGreet">สวัสดี</div>
-      <div class="ht-stats">
-        <div class="hts-cell">
-          <div class="hts-val hts-lime">Lv.<span id="homeLv">1</span></div>
-          <div class="hts-lbl">Level</div>
-        </div>
-        <div class="hts-cell">
-          <div class="hts-val" id="streakVal">0</div>
-          <div class="hts-lbl">วันติด</div>
-        </div>
-        <div class="hts-cell">
-          <div class="hts-val hts-lime" id="coinVal">0</div>
-          <div class="hts-lbl">เหรียญ</div>
-        </div>
+      <div class="ht-logo" id="htLogo">GUY</div>
+    </div>
+    <div class="home-stats">
+      <div class="ht-weight-box">
+        <div class="hts-val" id="homeWeight">–</div>
+        <div class="hts-lbl">กก.</div>
       </div>
+      <div class="ht-wk-box" id="htWkBox"></div>
     </div>
 
-    <div class="sec">
-      <div class="xp-row">
-        <span class="xp-level">XP</span>
-        <span class="xp-nums" id="xpText"></span>
-      </div>
-      <div class="xp-track"><div class="xp-fill" id="xpFill" style="width:0%"></div></div>
-    </div>
-
-    <!-- MONTHLY CALENDAR -->
-    <div class="sec">
-      <div class="cal-hdr">
-        <div class="cal-month" id="calMonthLbl"></div>
-        <div class="cal-streak" id="calStreakLbl"></div>
-      </div>
-      <div class="cal-grid" id="calGrid"></div>
-    </div>
-
-    <!-- AUTO DEFICIT CARD -->
+    <!-- DEFICIT CARD -->
     <div class="sec" id="deficitCard">
-      <div class="sec-lbl">TDEE · แคลวันนี้ · <span id="dcTdeeLabel"></span></div>
+      <div class="sec-lbl">แคลวันนี้ <span id="dcTdeeLabel" style="font-style:normal;font-family:inherit;font-size:11px;color:var(--t2)"></span></div>
       <div class="deficit-num-row">
         <div class="deficit-big" id="dcEaten">0</div>
         <div class="deficit-unit">/ <span id="dcTarget">–</span> kcal</div>
@@ -330,25 +347,23 @@ select.form-input option{background:var(--s2)}
       <div class="deficit-track"><div class="deficit-fill" id="dcBar" style="width:0%"></div></div>
       <div class="deficit-trio">
         <div class="dt-cell">
-          <div class="dt-val hts-lime" id="dcDeficit">–</div>
+          <div class="dt-val" id="dcDeficit" style="color:var(--lime)">–</div>
           <div class="dt-lbl" id="dcDeficitLbl">ขาดแคล</div>
         </div>
         <div class="dt-cell">
-          <div class="dt-val" id="dcProjCoins" style="color:var(--lime)">–</div>
-          <div class="dt-lbl">เหรียญคืนนี้</div>
+          <div class="dt-val" id="dcBurnToday" style="color:var(--grn)">–</div>
+          <div class="dt-lbl">เผาออกกำลัง</div>
         </div>
         <div class="dt-cell">
-          <div class="dt-val" id="dcDays" style="color:var(--t2)">–</div>
-          <div class="dt-lbl">วันถึงเป้า</div>
+          <div class="dt-val" id="dcDays" style="color:var(--t2);cursor:pointer" onclick="editTargetDeficit()">–</div>
+          <div class="dt-lbl">เป้า kcal/วัน ✏️</div>
         </div>
       </div>
     </div>
 
-    <div id="ydayCard"></div>
-
     <!-- CHECK-IN -->
     <div class="sec">
-      <div class="sec-lbl">เช็คอินวันนี้ · <span id="checkinCount">0/3</span></div>
+      <div class="sec-lbl">วันนี้ <span id="checkinCount" style="font-style:normal;font-family:inherit;font-size:11px;color:var(--t2)">0/3</span><span class="wex-badge">· วีคนี้ <span id="weeklyExCount">0</span>/<span class="wex-goal-edit" id="weeklyExGoalDisplay" onclick="editWeeklyGoal()">5</span> ครั้ง</span></div>
       <div class="ex-row" id="tileWeight" onclick="openExercise('weight')">
         <div class="ex-icon">🏋️</div>
         <div class="ex-info">
@@ -374,6 +389,24 @@ select.form-input option{background:var(--s2)}
         <div class="ex-badge todo" id="waterCheck">+</div>
       </div>
     </div>
+
+    <div id="ydayCard"></div>
+
+    <!-- BODY / CHART -->
+    <div class="sec">
+      <div class="sec-lbl">ร่างกาย <button class="btn-sm btn-lime" style="font-size:11px;padding:5px 12px" onclick="openLogWeight()">+ บันทึก</button></div>
+      <svg id="weightChartSvg" width="100%" height="180" style="display:block;overflow:visible"></svg>
+      <div id="weightLegend" style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--t2);flex-wrap:wrap"></div>
+      <div class="wgoal-row" id="wgoalRow">
+        <div class="wgoal-header">ถ้ากินอย่างนี้ต่อไป</div>
+        <div class="wgoal-cells" id="wgoalVals"><div style="color:var(--t3);font-size:12px;text-align:center;padding:4px 0">บันทึกอาหารก่อนเพื่อดูเป้า</div></div>
+        <div class="wgoal-target-row">
+          <span class="wgoal-target-lbl">เป้า deficit ของฉัน</span>
+          <span class="wgoal-target-val" id="targetDeficitDisplay" onclick="editTargetDeficit()">– kcal/วัน ✏️</span>
+          <span class="wgoal-target-eta" id="targetDeficitEta"></span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- FOOD -->
@@ -392,6 +425,10 @@ select.form-input option{background:var(--s2)}
       <input class="fsearch" id="foodSearch" placeholder="ค้นหาอาหาร เช่น ข้าวมันไก่..." oninput="onFoodSearch(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
       <div class="sr-dropdown" id="srDropdown"></div>
     </div>
+    <div class="recent-foods-wrap" id="recentFoodsWrap">
+      <div class="recent-lbl">กินมาก่อน</div>
+      <div class="recent-chips" id="recentChips"></div>
+    </div>
     <div class="macro-sec">
       <div class="kcal-ring">
         <svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="var(--line2)" stroke-width="5"/><circle id="kcalArc" cx="36" cy="36" r="30" fill="none" stroke="var(--lime)" stroke-width="5" stroke-linecap="round" stroke-dasharray="188" stroke-dashoffset="188" transform="rotate(-90 36 36)" style="transition:stroke-dashoffset .5s"/></svg>
@@ -409,16 +446,23 @@ select.form-input option{background:var(--s2)}
   <!-- PROGRESS -->
   <div id="screenProgress" class="screen">
     <div class="sec" style="padding-top:calc(var(--st)+16px)">
-      <div style="font-size:20px;font-weight:900;letter-spacing:-.5px;margin-bottom:16px">สถิติ</div>
-      <div class="stat-grid">
-        <div class="sg-cell"><div class="sg-val" id="statLevel">1</div><div class="sg-lbl">Level</div></div>
-        <div class="sg-cell"><div class="sg-val" style="color:var(--grn)" id="statStreak">0</div><div class="sg-lbl">วันติด</div></div>
-        <div class="sg-cell"><div class="sg-val" style="color:var(--t2)" id="statTotalXP">0</div><div class="sg-lbl">XP รวม</div></div>
-        <div class="sg-cell"><div class="sg-val" style="color:var(--t2)" id="statCheckin">0</div><div class="sg-lbl">วันเช็คอิน</div></div>
-        <div class="sg-cell sg-full"><div class="sg-val" id="statCoins">0</div><div class="sg-lbl">เหรียญสะสม</div></div>
+      <div style="font-size:20px;font-weight:900;letter-spacing:-.5px;margin-bottom:16px">ร่างกาย</div>
+      <div style="background:var(--s1);border-radius:16px;padding:14px;margin-bottom:14px">
+        <div class="sec-lbl" style="margin-bottom:12px">บันทึกวัดใหม่</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+          <div>
+            <label class="form-lbl">น้ำหนัก (kg)</label>
+            <input class="form-input" id="prWeight" type="number" inputmode="decimal" step="0.1" placeholder="86.5" oninput="updateBodyPreview()">
+          </div>
+          <div>
+            <label class="form-lbl">มวลไขมัน (kg)</label>
+            <input class="form-input" id="prFat" type="number" inputmode="decimal" step="0.1" placeholder="18.0" oninput="updateBodyPreview()">
+          </div>
+        </div>
+        <div id="prCalcPreview" style="font-size:11px;color:var(--t2);min-height:16px;margin-bottom:10px"></div>
+        <button class="btn btn-lime" style="width:100%;padding:12px" onclick="saveBodyRecord()">บันทึก ✓</button>
       </div>
-      <div class="sec-lbl" style="margin-bottom:10px">7 วันล่าสุด</div>
-      <div class="week-row" id="weekGrid"></div>
+      <div id="bodyRecordsList"></div>
     </div>
   </div>
 
@@ -486,10 +530,9 @@ select.form-input option{background:var(--s2)}
       <label class="form-lbl">กรอกเอง (นาที)</label>
       <input class="form-input" id="customMins" type="number" placeholder="เช่น 75" min="1" max="300" oninput="selectDur(null,this.value)">
     </div>
-    <div class="dur-preview" id="durPreview">
-      <div><div class="dp-val" style="color:var(--lime)" id="prevXP">–</div><div class="dp-lbl">XP</div></div>
-      <div><div class="dp-val" style="color:var(--lime)" id="prevCoins">–</div><div class="dp-lbl">เหรียญ</div></div>
-      <div><div class="dp-val" style="color:var(--red)" id="prevBurn">–</div><div class="dp-lbl">kcal เผา</div></div>
+    <div class="dur-preview" id="durPreview" style="grid-template-columns:1fr 1fr">
+      <div><div class="dp-val" style="color:var(--lime)" id="prevBurn">–</div><div class="dp-lbl">kcal เผา</div></div>
+      <div><div class="dp-val" style="color:var(--t2)" id="prevDeficitNote">–</div><div class="dp-lbl">ขาดแคลสุทธิวันนี้</div></div>
     </div>
     <div class="form-group" style="margin-bottom:12px">
       <label class="form-lbl">แคลจริงจากเครื่อง (ไม่บังคับ)</label>
@@ -502,17 +545,24 @@ select.form-input option{background:var(--s2)}
   </div>
 </div>
 
+<!-- MODAL: INPUT -->
+<div class="modal" id="modalInput">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="inputModalTitle">แก้ไข</div>
+    <input class="form-input" id="inputModalVal" type="number" inputmode="numeric" style="margin-bottom:16px;font-size:18px;font-weight:900">
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="closeModal('modalInput')">ยกเลิก</button>
+      <button class="btn btn-lime" onclick="confirmInputModal()">ตกลง ✓</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL: FOOD SEARCH -->
 <div class="modal" id="modalFoodMeal">
   <div class="modal-sheet">
     <div class="modal-handle"></div>
     <div class="modal-title" id="modalFoodTitle">เพิ่มอาหาร</div>
-    <div class="form-group"><label class="form-lbl">มื้อ</label>
-      <select class="form-input" id="srMeal">
-        <option value="breakfast">🌅 เช้า</option><option value="lunch">☀️ กลางวัน</option>
-        <option value="dinner">🌙 เย็น</option><option value="snack">🍪 ของว่าง</option>
-      </select>
-    </div>
     <div class="form-group"><label class="form-lbl">จำนวน</label>
       <div style="display:flex;gap:8px;align-items:center">
         <input class="form-input" id="srQty" type="number" value="1" min="0.25" step="0.25" style="width:75px;flex-shrink:0">
@@ -552,12 +602,6 @@ select.form-input option{background:var(--s2)}
     <div class="modal-handle"></div>
     <div class="modal-title">กรอกอาหาร</div>
     <div class="form-group"><label class="form-lbl">ชื่ออาหาร</label><input class="form-input" id="mfName" placeholder="ชื่ออาหาร"></div>
-    <div class="form-group"><label class="form-lbl">มื้อ</label>
-      <select class="form-input" id="mfMeal">
-        <option value="breakfast">🌅 เช้า</option><option value="lunch">☀️ กลางวัน</option>
-        <option value="dinner">🌙 เย็น</option><option value="snack">🍪 ของว่าง</option>
-      </select>
-    </div>
     <div class="form-group"><label class="form-lbl">แคลอรี่ (kcal)</label><input class="form-input" id="mfKcal" type="number" placeholder="เช่น 350"></div>
     <div class="form-row3">
       <div class="form-group"><label class="form-lbl">คาร์บ (g)</label><input class="form-input" id="mfCarb" type="number" placeholder="0"></div>
@@ -591,6 +635,29 @@ select.form-input option{background:var(--s2)}
     </div>
   </div>
 </div>
+
+<!-- MODAL: LOG WEIGHT -->
+<div class="modal" id="modalLogWeight">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title">บันทึกร่างกายวันนี้</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-lbl">น้ำหนัก (kg)</label>
+        <input class="form-input" id="logWeightVal" type="number" step="0.1" placeholder="72.5">
+      </div>
+      <div class="form-group">
+        <label class="form-lbl">ไขมัน % (ถ้ามี)</label>
+        <input class="form-input" id="logFatVal" type="number" step="0.1" placeholder="20.5">
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="closeModal('modalLogWeight')">ยกเลิก</button>
+      <button class="btn btn-lime" onclick="saveWeight()">บันทึก ✓</button>
+    </div>
+  </div>
+</div>
+
 
 <!-- MODAL: IMPORT DATA -->
 <div class="modal" id="modalImport">
@@ -629,6 +696,7 @@ const scid=(id)=>_store.set(K.current,id);
 const getProfile=(id)=>gp().find(p=>p.id===id);
 const curProfile=()=>getProfile(gcid());
 let viewDate=today();
+let chartTab='weight';
 function getViewData(p,date){
   if(!p.days)p.days={};
   if(!p.days[date]){
@@ -874,7 +942,7 @@ function renderSetupStep(){
     <div class="setup-sub">ใช้คำนวณ "ถึงเป้าเร็วขึ้นกี่วัน" (ไม่บังคับ)</div>
     ${setupData.goal!=='maintenance'?`<div class="form-group"><label class="form-lbl">น้ำหนักเป้าหมาย (kg)</label><input class="form-input" id="st_weight" type="number" placeholder="เช่น 65" value="${setupData.targetWeight||''}"></div>`:''}
     <div class="form-group"><label class="form-lbl">ไขมันเป้าหมาย (%)</label><input class="form-input" id="st_fat" type="number" placeholder="เช่น 15" value="${setupData.targetFat||''}"></div>
-    <div class="form-group"><label class="form-lbl">ระยะเวลา (สัปดาห์)</label><input class="form-input" id="st_weeks" type="number" placeholder="เช่น 12" value="${setupData.timeline||''}"></div>
+    <div class="form-group"><label class="form-lbl">เป้า deficit/วัน (kcal)</label><input class="form-input" id="st_deficit" type="number" placeholder="เช่น 500" value="${setupData.targetDeficit||''}"><div style="font-size:10px;color:var(--t2);margin-top:4px">ระบบจะคำนวณเวลาให้อัตโนมัติ · แนะนำ 300–600 kcal</div></div>
     <div class="btn-row">
       <button class="btn btn-outline" onclick="nextSetup()">ข้ามขั้นนี้</button>
       <button class="btn btn-lime" onclick="saveTargets()">ถัดไป →</button>
@@ -910,10 +978,10 @@ function nextSetup(){setupStep++;renderSetupStep();}
 function saveTargets(){
   const wEl=document.getElementById('st_weight');
   const fEl=document.getElementById('st_fat');
-  const wkEl=document.getElementById('st_weeks');
+  const defEl=document.getElementById('st_deficit');
   if(wEl&&wEl.value)setupData.targetWeight=parseFloat(wEl.value);
   if(fEl&&fEl.value)setupData.targetFat=parseFloat(fEl.value);
-  if(wkEl&&wkEl.value)setupData.timeline=parseInt(wkEl.value);
+  if(defEl&&defEl.value)setupData.targetDeficit=parseInt(defEl.value);
   nextSetup();
 }
 function finishSetup(){
@@ -945,22 +1013,123 @@ function showTab(tab){
   else if(tab==='Profile')renderProfileTab();
 }
 
+function getWeeklyExCount(p){
+  const now=new Date();
+  const dow=now.getDay();
+  const monday=new Date(now);
+  monday.setDate(now.getDate()-(dow===0?6:dow-1));
+  monday.setHours(0,0,0,0);
+  const mondayStr=fmtDate(monday);
+  let count=0;
+  Object.entries(p.days||{}).forEach(([d,day])=>{
+    if(d>=mondayStr){
+      if(day.weight&&day.weight.done)count++;
+      if(day.cardio&&day.cardio.done)count++;
+    }
+  });
+  return count;
+}
+
+function getWeeklyActuals(p){
+  const now=new Date();
+  const dow=now.getDay();
+  const monday=new Date(now);
+  monday.setDate(now.getDate()-(dow===0?6:dow-1));
+  monday.setHours(0,0,0,0);
+  const mondayStr=fmtDate(monday);
+  let totalKcal=0,weightMins=0,cardioMins=0;
+  Object.entries(p.days||{}).forEach(([d,day])=>{
+    if(d>=mondayStr){
+      if(day.food&&day.food.length)totalKcal+=day.food.reduce((s,f)=>s+(f.kcal||0),0);
+      if(day.weight&&day.weight.done)weightMins+=day.weight.mins||0;
+      if(day.cardio&&day.cardio.done)cardioMins+=day.cardio.mins||0;
+    }
+  });
+  return {totalKcal,weightMins,cardioMins};
+}
+
+function renderWeeklyGoalsBox(p){
+  const box=document.getElementById('htWkBox');if(!box)return;
+  const targets=calcTargets(p);
+  const kcalGoal=p.weeklyKcalGoal||targets.kcal;
+  const wMins=p.weeklyWeightMins!=null?p.weeklyWeightMins:180;
+  const cMins=p.weeklyCardioMins!=null?p.weeklyCardioMins:120;
+  const foodDef=targets.tdee-kcalGoal;
+  const exDef=Math.round((wMins*4+cMins*7)/7);
+  const total=foodDef+exDef;
+  const defSign=total>=0?'↓':'↑';
+  const defCol=total>=0?'var(--lime)':'var(--red)';
+
+  const act=getWeeklyActuals(p);
+  const weekBudget=kcalGoal*7;
+  const foodPct=weekBudget>0?act.totalKcal/weekBudget:0;
+  const wPct=wMins>0?act.weightMins/wMins:0;
+  const cPct=cMins>0?act.cardioMins/cMins:0;
+
+  const CL={w:'#7BC8FF',c:'#FF9F45'};
+  const cx=44,cy=44;
+  function arc(r,pct,col){
+    const circ=2*Math.PI*r;
+    const filled=(Math.min(1,pct)*circ).toFixed(2);
+    const prog=pct>0.01?`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${col}" stroke-width="7" stroke-dasharray="${filled} ${(circ*2).toFixed(2)}" stroke-linecap="round" transform="rotate(-90 ${cx} ${cy})"/>`:'';
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${col}" stroke-width="7" stroke-opacity="0.18"/>${prog}`;
+  }
+
+  const defLbl=total>=0?`ขาด ${Math.abs(total)} kcal/วัน`:`เกิน ${Math.abs(total)} kcal/วัน`;
+  const wPct100=Math.min(100,Math.round(wPct*100));
+  const cPct100=Math.min(100,Math.round(cPct*100));
+  box.innerHTML=`
+    <div style="font-size:11px;font-weight:900;color:${defCol};margin-bottom:8px;cursor:pointer" onclick="editTargetDeficit()">
+      ${defSign}${Math.abs(total)} kcal/วัน
+      <span style="font-size:9px;font-weight:600;color:var(--t2)"> deficit เป้า ✏️</span>
+    </div>
+    <div style="margin-bottom:7px" onclick="editWkGoal('weight')" style="cursor:pointer">
+      <div class="ht-bar-row">
+        <span style="font-size:10px;font-weight:700;color:var(--t2);cursor:pointer">🏋️ เวทสัปดาห์นี้</span>
+        <span style="font-size:10px;font-weight:900;color:var(--text);cursor:pointer">${act.weightMins}/${wMins} นาที</span>
+      </div>
+      <div class="ht-bar-track" style="cursor:pointer"><div class="ht-bar-fill" style="width:${wPct100}%;background:#7BC8FF"></div></div>
+    </div>
+    <div onclick="editWkGoal('cardio')" style="cursor:pointer">
+      <div class="ht-bar-row">
+        <span style="font-size:10px;font-weight:700;color:var(--t2)">🏃 คาร์ดิโอสัปดาห์นี้</span>
+        <span style="font-size:10px;font-weight:900;color:var(--text)">${act.cardioMins}/${cMins} นาที</span>
+      </div>
+      <div class="ht-bar-track"><div class="ht-bar-fill" style="width:${cPct100}%;background:#FF9F45"></div></div>
+    </div>`;
+}
+
+function editWkGoal(type){
+  const p=curProfile();if(!p)return;
+  const targets=calcTargets(p);
+  const cfg={
+    kcal:{lbl:'เป้ากินต่อวัน (kcal)',key:'weeklyKcalGoal',def:p.weeklyKcalGoal||targets.kcal,min:800,max:5000},
+    weight:{lbl:'เวทต่อสัปดาห์ (นาที)',key:'weeklyWeightMins',def:p.weeklyWeightMins!=null?p.weeklyWeightMins:180,min:0,max:600},
+    cardio:{lbl:'คาร์ดิโอต่อสัปดาห์ (นาที)',key:'weeklyCardioMins',def:p.weeklyCardioMins!=null?p.weeklyCardioMins:120,min:0,max:600}
+  };
+  const c=cfg[type];
+  showInputModal(c.lbl,c.def,c.min,c.max,n=>{
+    p[c.key]=n;saveProfileData(p);renderHome();
+  });
+}
+
 function renderHome(){
   const p=curProfile();if(!p)return;
   const d=getTodayData(p);
-  const{level,xpIn,xpNext}=getLevelFromXP(p.xp||0);
-  const pct=Math.min(100,Math.round(xpIn/xpNext*100));
-  const hours=new Date().getHours();
-  const greet=hours<12?'อรุณสวัสดิ์':hours<18?'สวัสดี':'ตอนเย็นสวัสดิ์';
-  document.getElementById('homeGreet').textContent=`${greet}, ${p.name}`;
-  document.getElementById('homeDate').textContent=new Date().toLocaleDateString('th-TH',{weekday:'long',day:'numeric',month:'long'});
-  document.getElementById('homeLv').textContent=level;
-  document.getElementById('xpFill').style.width=pct+'%';
-  document.getElementById('xpText').textContent=`${xpIn}/${xpNext} XP`;
-  document.getElementById('streakVal').textContent=p.streak||1;
-  document.getElementById('coinVal').textContent=(p.coins||0).toLocaleString();
   document.getElementById('checkinCount').textContent=`${dayCheckinCount(d)}/3`;
-  renderMonthCalendar(p);
+  const wlog=p.weightLog||{};
+  const sorted=Object.keys(wlog).sort();
+  const latestW=sorted.length?Number(wlog[sorted[sorted.length-1]]):p.weight;
+  document.getElementById('homeWeight').textContent=latestW?latestW.toFixed(1):p.weight;
+  const wexCount=getWeeklyExCount(p);
+  const wexGoal=p.weeklyExGoal||5;
+  const wexEl=document.getElementById('weeklyExCount');
+  const wexGoalEl=document.getElementById('weeklyExGoalDisplay');
+  if(wexEl)wexEl.textContent=wexCount;
+  if(wexGoalEl)wexGoalEl.textContent=wexGoal;
+  renderWeeklyGoalsBox(p);
+  renderWeightChart(p);
+  renderWeeklyGoalCard(p);
   renderDeficitCard(p,d);
   renderYesterdayCard(p);
   renderCheckinTiles(d);
@@ -993,72 +1162,60 @@ function renderMonthCalendar(p){
 function renderDeficitCard(p,d){
   const targets=calcTargets(p);
   const eaten=d.food.reduce((s,f)=>s+f.kcal,0);
+  const burnEx=(d.weight&&d.weight.done?d.weight.mins*EX_RATES.weight.burnPerMin:0)+
+               (d.cardio&&d.cardio.done?d.cardio.mins*EX_RATES.cardio.burnPerMin:0);
   const goalKcal=targets.kcal;
-  const deficit=goalKcal-eaten;
+  const netDeficit=goalKcal-eaten+Math.round(burnEx);
   const pct=Math.min(100,Math.round(eaten/goalKcal*100));
   const barColor=pct>100?'var(--red)':pct>80?'var(--lime)':'var(--grn)';
-  document.getElementById('dcTdeeLabel').textContent=`TDEE ${targets.tdee}`;
+  document.getElementById('dcTdeeLabel').textContent=`TDEE ${targets.tdee} kcal`;
   document.getElementById('dcBar').style.width=pct+'%';
   document.getElementById('dcBar').style.background=barColor;
   document.getElementById('dcEaten').textContent=eaten;
   document.getElementById('dcTarget').textContent=goalKcal;
-  if(deficit>0){
-    document.getElementById('dcDeficit').textContent=deficit+' kcal';
+  document.getElementById('dcBurnToday').textContent=burnEx>0?Math.round(burnEx)+' kcal':'–';
+  const wlog=p.weightLog||{};const sorted=Object.keys(wlog).sort();
+  const curW=sorted.length?Number(wlog[sorted[sorted.length-1]]):p.weight;
+  if(netDeficit>0){
+    document.getElementById('dcDeficit').textContent=netDeficit+' kcal';
     document.getElementById('dcDeficit').style.color='var(--grn)';
-    document.getElementById('dcDeficitLbl').textContent='ขาดแคล';
-    document.getElementById('dcProjCoins').textContent='+'+Math.floor(deficit/2);
-    let daysNote='–';
-    if(p.targetWeight&&p.weight>p.targetWeight){
-      const days=Math.round((p.weight-p.targetWeight)*7700/deficit);
-      daysNote=days>365?Math.round(days/30)+'mo':days+'d';
-    }
-    document.getElementById('dcDays').textContent=daysNote;
-    document.getElementById('dcNote').textContent=`ขาดแคลอีก ${deficit} kcal ← ดี ลดไขมัน −${Math.round(deficit/7.7)}g วันนี้`;
-  }else if(deficit<0){
-    document.getElementById('dcDeficit').textContent=Math.abs(deficit)+' kcal';
+    document.getElementById('dcDeficitLbl').textContent='ขาดแคลสุทธิ';
+    const lossG=Math.round(netDeficit/7.7);
+    document.getElementById('dcNote').textContent=`ลดไขมันได้ ~${lossG}g วันนี้`;
+  }else if(netDeficit<0){
+    document.getElementById('dcDeficit').textContent=Math.abs(netDeficit)+' kcal';
     document.getElementById('dcDeficit').style.color='var(--red)';
     document.getElementById('dcDeficitLbl').textContent='เกินเป้า';
-    document.getElementById('dcProjCoins').textContent='0';
-    document.getElementById('dcDays').textContent='–';
-    document.getElementById('dcNote').textContent=`กินเกิน ${Math.abs(deficit)} kcal จากเป้าวันนี้`;
+    document.getElementById('dcNote').textContent=`กินเกิน ${Math.abs(netDeficit)} kcal จากเป้า`;
   }else{
     document.getElementById('dcDeficit').textContent='ตรงเป้า';
     document.getElementById('dcDeficit').style.color='var(--t2)';
     document.getElementById('dcDeficitLbl').textContent='สถานะ';
-    document.getElementById('dcProjCoins').textContent='0';
-    document.getElementById('dcDays').textContent='–';
     document.getElementById('dcNote').textContent='กินตรงเป้าพอดี';
   }
+  // Show user's target deficit (editable)
+  const td=p.targetDeficit||null;
+  document.getElementById('dcDays').textContent=td?td:'ตั้งเป้า';
+  document.getElementById('dcDays').style.color=td?'var(--lime)':'var(--t3)';
 }
 
 function renderCheckinTiles(d){
-  const tw=document.getElementById('tileWeight');
   const ws=document.getElementById('weightSub');
   const wb=document.getElementById('weightBadge');
   if(d.weight&&d.weight.done){
-    tw.classList.add('done-weight');
-    ws.textContent=`${d.weight.mins} นาที · +${Math.round(d.weight.mins*EX_RATES.weight.xpPerMin)} XP`;
-    wb.className='ex-badge done-blue';wb.textContent='✓';
-  }else{tw.classList.remove('done-weight');ws.textContent='แตะเพื่อบันทึก';wb.className='ex-badge todo';wb.textContent='+';}
-  const tc=document.getElementById('tileCardio');
+    ws.textContent=`${d.weight.mins} นาที · เผา ${Math.round(d.weight.mins*EX_RATES.weight.burnPerMin)} kcal`;
+    wb.className='ex-badge done-lime';wb.textContent='✓';
+  }else{ws.textContent='แตะเพื่อบันทึก';wb.className='ex-badge todo';wb.textContent='+';}
   const cs=document.getElementById('cardioSub');
   const cb=document.getElementById('cardioBadge');
   if(d.cardio&&d.cardio.done){
-    tc.classList.add('done');
-    cs.textContent=`${d.cardio.mins} นาที · +${Math.round(d.cardio.mins*EX_RATES.cardio.xpPerMin)} XP`;
+    cs.textContent=`${d.cardio.mins} นาที · เผา ${Math.round(d.cardio.mins*EX_RATES.cardio.burnPerMin)} kcal`;
     cb.className='ex-badge done-lime';cb.textContent='✓';
-  }else{tc.classList.remove('done');cs.textContent='แตะเพื่อบันทึก';cb.className='ex-badge todo';cb.textContent='+';}
-  const wc=document.getElementById('waterCheckin');
+  }else{cs.textContent='แตะเพื่อบันทึก';cb.className='ex-badge todo';cb.textContent='+';}
   const wck=document.getElementById('waterCheck');
   const wst=document.getElementById('waterSub');
-  if(d.water){
-    wc.style.opacity='1';
-    wck.className='ex-badge done-blue';wck.textContent='✓';
-    wst.textContent='ดื่มน้ำครบแล้ว';
-  }else{
-    wck.className='ex-badge todo';wck.textContent='+';
-    wst.textContent='แตะเมื่อดื่มน้ำครบแล้ว';
-  }
+  if(d.water){wck.className='ex-badge done-lime';wck.textContent='✓';wst.textContent='ดื่มน้ำครบแล้ว';}
+  else{wck.className='ex-badge todo';wck.textContent='+';wst.textContent='แตะเมื่อดื่มน้ำครบแล้ว';}
 }
 
 function renderYesterdayCard(p){
@@ -1129,36 +1286,37 @@ function selectDur(mins,raw){
 }
 function updateDurPreview(mins,rates){
   if(!mins||mins<=0){
-    ['prevXP','prevCoins','prevBurn'].forEach(id=>document.getElementById(id).textContent='–');return;
+    const b=document.getElementById('prevBurn');const n=document.getElementById('prevDeficitNote');
+    if(b)b.textContent='–';if(n)n.textContent='–';return;
   }
-  const xp=Math.round(mins*rates.xpPerMin);
   const burn=Math.round(mins*rates.burnPerMin);
-  const coins=Math.floor(burn/5);
-  document.getElementById('prevXP').textContent='+'+xp;
-  document.getElementById('prevCoins').textContent='+'+coins;
-  document.getElementById('prevBurn').textContent=burn+' kcal';
+  const b=document.getElementById('prevBurn');if(b)b.textContent=burn+' kcal';
+  // calc projected net deficit today
+  const p=curProfile();
+  if(p){
+    const d=getTodayData(p);
+    const targets=calcTargets(p);
+    const eaten=d.food.reduce((s,f)=>s+f.kcal,0);
+    const existBurn=(d.weight&&d.weight.done&&currentExType!=='weight'?d.weight.mins*EX_RATES.weight.burnPerMin:0)+
+                    (d.cardio&&d.cardio.done&&currentExType!=='cardio'?d.cardio.mins*EX_RATES.cardio.burnPerMin:0);
+    const net=targets.kcal-eaten+Math.round(existBurn)+burn;
+    const n=document.getElementById('prevDeficitNote');
+    if(n)n.textContent=(net>0?'+':'')+net+' kcal';
+  }
 }
 function confirmExercise(){
   const mins=selectedMins;
   if(!mins||mins<=0){showToast('เลือกจำนวนนาทีก่อน');return;}
   const p=curProfile();const d=getTodayData(p);
   const rates=EX_RATES[currentExType];
-  const mult=p.streak>=7?1.5:p.streak>=3?1.2:1;
-  const xp=Math.round(mins*rates.xpPerMin*mult);
   const kcalOverride=parseInt(document.getElementById('exKcalOverride').value)||0;
   const burn=kcalOverride>0?kcalOverride:Math.round(mins*rates.burnPerMin);
-  const coins=Math.floor(burn/5);
   const wasFirst=!dayHasCheckin(d);
-  d[currentExType]={done:true,mins};
-  p.xp=(p.xp||0)+xp;
-  p.coins=(p.coins||0)+coins;
+  d[currentExType]={done:true,mins,burn};
   if(wasFirst&&dayHasCheckin(d))p.totalCheckins=(p.totalCheckins||0)+1;
-  const oldLevel=getLevelFromXP((p.xp||0)-xp).level;
-  const newLevel=getLevelFromXP(p.xp).level;
   saveProfileData(p);
   closeModal('modalExercise');
-  showToast(`${currentExType==='weight'?'🏋️':'🏃'} ${mins} นาที! +${xp} XP +${coins} เหรียญ`);
-  if(newLevel>oldLevel)setTimeout(()=>showToast(`LEVEL UP! → Lv.${newLevel}`),2400);
+  showToast(`${currentExType==='weight'?'🏋️':'🏃'} ${mins} นาที · เผา ${burn} kcal ✓`);
   renderHome();
 }
 
@@ -1166,14 +1324,9 @@ function toggleWater(){
   const p=curProfile();const d=getTodayData(p);
   const wasFirst=!dayHasCheckin(d);
   d.water=!d.water;
-  if(d.water){
-    const mult=p.streak>=7?1.5:p.streak>=3?1.2:1;
-    const xp=Math.round(30*mult);
-    p.xp=(p.xp||0)+xp;
-    if(wasFirst)p.totalCheckins=(p.totalCheckins||0)+1;
-    saveProfileData(p);
-    showToast(`💧 ดื่มน้ำครบ! +${xp} XP`);
-  }else{saveProfileData(p);}
+  if(d.water&&wasFirst)p.totalCheckins=(p.totalCheckins||0)+1;
+  saveProfileData(p);
+  if(d.water)showToast('💧 ดื่มน้ำครบแล้ว ✓');
   renderHome();
 }
 
@@ -1194,6 +1347,7 @@ function renderFood(){
   document.getElementById('kcalTarget').textContent=targets.kcal;
   updateMacroDisplay(d.food,targets);
   renderFoodLog(d.food,!isToday);
+  if(isToday)renderRecentFoods(p);
 }
 function updateMacroDisplay(foods,targets){
   const tot={kcal:0,c:0,p:0,f:0};
@@ -1208,24 +1362,45 @@ function updateMacroDisplay(foods,targets){
   document.getElementById('proteinBar').style.width=Math.min(100,tot.p/targets.protein*100)+'%';
   document.getElementById('fatBar').style.width=Math.min(100,tot.f/targets.fat*100)+'%';
 }
-const mealLabel={breakfast:'เช้า',lunch:'กลางวัน',dinner:'เย็น',snack:'ของว่าง'};
-const mealClass={breakfast:'mt-breakfast',lunch:'mt-lunch',dinner:'mt-dinner',snack:'mt-snack'};
 function renderFoodLog(foods,readonly){
   const el=document.getElementById('foodLogList');
   if(!foods.length){el.innerHTML=`<div style="text-align:center;color:var(--t2);padding:24px 0;font-size:13px">${readonly?'ไม่มีรายการวันนี้':'ยังไม่มีรายการ'}</div>`;return;}
-  const byMeal={};
-  foods.forEach((f,i)=>{if(!byMeal[f.meal])byMeal[f.meal]=[];byMeal[f.meal].push({...f,_i:i});});
-  el.innerHTML=['breakfast','lunch','dinner','snack'].filter(m=>byMeal[m]).map(m=>`
-    <div class="meal-tag ${mealClass[m]}">${mealLabel[m]}</div>
-    ${byMeal[m].map(f=>`<div class="food-log-item">
-      <div class="fli-info">
-        <div class="fli-name">${f.name}${f.qty&&f.qty!==1?` ×${f.qty}`:''}${f.unit?' ('+f.unit+')':''}</div>
-        <div class="fli-macros">C:${Math.round(f.c)}g P:${Math.round(f.p)}g F:${Math.round(f.f)}g</div>
-      </div>
-      <div class="fli-kcal">${Math.round(f.kcal)}</div>
-      ${readonly?'':`<button class="fli-edit" onclick="openEditFood(${f._i})">✎</button>
-      <button class="fli-del" onclick="deleteFood(${f._i})">×</button>`}
-    </div>`).join('')}`).join('');
+  el.innerHTML=foods.map((f,i)=>`<div class="food-log-item">
+    <div class="fli-info">
+      <div class="fli-name">${f.name}${f.qty&&f.qty!==1?` ×${f.qty}`:''}${f.unit?' ('+f.unit+')':''}</div>
+      <div class="fli-macros">C:${Math.round(f.c||0)}g P:${Math.round(f.p||0)}g F:${Math.round(f.f||0)}g</div>
+    </div>
+    <div class="fli-kcal">${Math.round(f.kcal)}</div>
+    ${readonly?'':`<button class="fli-edit" onclick="openEditFood(${i})">✎</button>
+    <button class="fli-del" onclick="deleteFood(${i})">×</button>`}
+  </div>`).join('');
+}
+function getRecentFoodHistory(p){
+  const seen=new Map();
+  const dates=Object.keys(p.days||{}).sort().reverse();
+  for(const d of dates){
+    const foods=(p.days[d].food||[]);
+    for(const f of foods){
+      if(f.name&&!seen.has(f.name))seen.set(f.name,f);
+    }
+  }
+  return Array.from(seen.values()).slice(0,10);
+}
+let _recentHistory=[];
+function renderRecentFoods(p){
+  const wrap=document.getElementById('recentFoodsWrap');
+  const chips=document.getElementById('recentChips');
+  if(!wrap||!chips)return;
+  _recentHistory=getRecentFoodHistory(p);
+  if(!_recentHistory.length){wrap.style.display='none';return;}
+  wrap.style.display='block';
+  chips.innerHTML=_recentHistory.map((f,i)=>`<div class="recent-chip" onclick="quickAddRecent(${i})">
+    ${f.name} <span class="rc-kcal">${Math.round(f.kcal)} kcal</span>
+  </div>`).join('');
+}
+function quickAddRecent(idx){
+  const f=_recentHistory[idx];if(!f)return;
+  addFoodEntry({name:f.name,unit:f.unit||'',qty:f.qty||1,kcal:f.kcal,c:f.c||0,p:f.p||0,f:f.f||0});
 }
 function deleteFood(idx){
   const p=curProfile();const d=getTodayData(p);
@@ -1262,7 +1437,9 @@ function saveEditFood(){
 }
 function onFoodSearch(q){
   const dr=document.getElementById('srDropdown');
-  if(!q.trim()){dr.style.display='none';return;}
+  const rw=document.getElementById('recentFoodsWrap');
+  if(!q.trim()){dr.style.display='none';if(rw)rw.style.display='block';return;}
+  if(rw)rw.style.display='none';
   const res=FOOD_DB.filter(f=>f.name.includes(q)||q.split('').some(c=>f.name.includes(c))).slice(0,8);
   if(!res.length){dr.style.display='none';return;}
   dr.style.display='block';
@@ -1291,9 +1468,8 @@ function updateFoodPreview(f,qty){
 }
 function confirmAddFood(){
   const qty=parseFloat(document.getElementById('srQty').value)||1;
-  const meal=document.getElementById('srMeal').value;
   const f=pendingFood;
-  addFoodEntry({name:f.name,unit:f.unit,qty,meal,kcal:f.kcal*qty,c:f.c*qty,p:f.p*qty,f:f.f*qty});
+  addFoodEntry({name:f.name,unit:f.unit,qty,kcal:f.kcal*qty,c:f.c*qty,p:f.p*qty,f:f.f*qty});
   closeModal('modalFoodMeal');
 }
 function openManualFood(){document.getElementById('modalManualFood').classList.add('show');}
@@ -1303,9 +1479,8 @@ function saveManualFood(){
   const c=parseFloat(document.getElementById('mfCarb').value)||0;
   const p2=parseFloat(document.getElementById('mfProtein').value)||0;
   const f2=parseFloat(document.getElementById('mfFat').value)||0;
-  const meal=document.getElementById('mfMeal').value;
   if(!name||!kcal){showToast('กรอกชื่อและแคลอรี่ด้วย');return;}
-  addFoodEntry({name,meal,kcal,c,p:p2,f:f2});
+  addFoodEntry({name,kcal,c,p:p2,f:f2});
   closeModal('modalManualFood');
   ['mfName','mfKcal','mfCarb','mfProtein','mfFat'].forEach(id=>document.getElementById(id).value='');
 }
@@ -1318,23 +1493,84 @@ function addFoodEntry(entry){
 
 function renderProgress(){
   const p=curProfile();if(!p)return;
-  const{level}=getLevelFromXP(p.xp||0);
-  document.getElementById('statLevel').textContent=level;
-  document.getElementById('statStreak').textContent=p.streak||1;
-  document.getElementById('statTotalXP').textContent=p.xp||0;
-  document.getElementById('statCheckin').textContent=p.totalCheckins||0;
-  document.getElementById('statCoins').textContent=(p.coins||0).toLocaleString();
-  const wg=document.getElementById('weekGrid');
-  const days=['อา','จ','อ','พ','พฤ','ศ','ส'];
-  const now=new Date();
-  wg.innerHTML=Array.from({length:7},(_,i)=>{
-    const d=new Date(now);d.setDate(now.getDate()-6+i);
-    const key=d.toISOString().slice(0,10);
-    const isToday=key===today();
-    const data=p.days&&p.days[key];
-    const has=data&&dayHasCheckin(data);
-    return`<div class="wday"><div class="wday-lbl">${days[d.getDay()]}</div>
-      <div class="wday-dot${has?' done':''}${isToday?' today':''}">${has?'✓':isToday?'·':''}</div>
+  renderBodyRecords(p);
+}
+
+function updateBodyPreview(){
+  const w=parseFloat(document.getElementById('prWeight').value);
+  const f=parseFloat(document.getElementById('prFat').value);
+  const el=document.getElementById('prCalcPreview');
+  if(!isNaN(w)&&!isNaN(f)&&w>0&&f>0&&f<w){
+    const fatMass=f.toFixed(1);
+    const muscle=(w-f).toFixed(1);
+    const fatPct=(f/w*100).toFixed(1);
+    el.textContent=`→ ไขมัน ${fatPct}% · กล้ามเนื้อ ${muscle} kg`;
+  }else{
+    el.textContent='';
+  }
+}
+
+function saveBodyRecord(){
+  const p=curProfile();if(!p)return;
+  const w=parseFloat(document.getElementById('prWeight').value);
+  const f=parseFloat(document.getElementById('prFat').value);
+  if(isNaN(w)||w<20||w>300){showToast('กรอกน้ำหนัก 20–300 kg');return;}
+  const fatMass=(!isNaN(f)&&f>0&&f<w)?f.toFixed(1):null;
+  const muscle=fatMass?(w-f).toFixed(1):null;
+  const fatPct=fatMass?(f/w*100).toFixed(1):null;
+  if(!p.bodyRecords)p.bodyRecords=[];
+  p.bodyRecords.push({date:today(),weight:w.toFixed(1),fatPct,fatMass,muscle});
+  p.weightLog=p.weightLog||{};
+  p.weightLog[today()]=w;
+  saveProfileData(p);
+  document.getElementById('prWeight').value='';
+  document.getElementById('prFat').value='';
+  document.getElementById('prCalcPreview').textContent='';
+  showToast('บันทึกแล้ว ✓');
+  renderBodyRecords(p);
+}
+
+function deleteBodyRecord(idx){
+  const p=curProfile();if(!p)return;
+  p.bodyRecords.splice(idx,1);
+  saveProfileData(p);
+  renderBodyRecords(p);
+}
+
+function renderBodyRecords(p){
+  const el=document.getElementById('bodyRecordsList');if(!el)return;
+  const recs=(p.bodyRecords||[]);
+  if(!recs.length){
+    el.innerHTML='<div style="color:var(--t3);font-size:12px;text-align:center;padding:24px 0">ยังไม่มีเรคคอร์ด — บันทึกวัดแรกได้เลย</div>';
+    return;
+  }
+  el.innerHTML=[...recs].reverse().map((r,i)=>{
+    const realIdx=recs.length-1-i;
+    const recNum=realIdx+1;
+    const prev=realIdx>0?recs[realIdx-1]:null;
+    const diff=prev?(parseFloat(r.weight)-parseFloat(prev.weight)):null;
+    const diffStr=diff!=null?(diff>0?`+${diff.toFixed(1)}`:(diff<0?diff.toFixed(1):'±0')):'';
+    const diffCol=diff==null?'':diff<0?'var(--lime)':diff>0?'var(--red)':'var(--t2)';
+    const hasFat=r.fatMass!=null;
+    return`<div style="background:var(--s1);border-radius:14px;padding:12px 14px;margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span style="font-size:11px;font-weight:700;color:var(--t3)">#${recNum} · ${r.date}</span>
+        <button onclick="deleteBodyRecord(${realIdx})" style="background:none;border:none;color:var(--t3);font-size:18px;cursor:pointer;padding:0;line-height:1">×</button>
+      </div>
+      <div style="display:grid;grid-template-columns:${hasFat?'repeat(3,1fr)':'1fr'};gap:8px;text-align:center">
+        <div>
+          <div style="font-size:22px;font-weight:900;letter-spacing:-1px;color:var(--text)">${r.weight} <span style="font-size:12px;font-weight:700;color:${diffCol}">${diffStr}</span></div>
+          <div style="font-size:9px;font-weight:700;color:var(--t2);text-transform:uppercase;margin-top:2px">น้ำหนัก kg</div>
+        </div>
+        ${hasFat?`<div>
+          <div style="font-size:22px;font-weight:900;letter-spacing:-1px;color:var(--red)">${r.fatMass}</div>
+          <div style="font-size:9px;font-weight:700;color:var(--t2);text-transform:uppercase;margin-top:2px">ไขมัน kg</div>
+        </div>
+        <div>
+          <div style="font-size:22px;font-weight:900;letter-spacing:-1px;color:var(--lime)">${r.muscle}</div>
+          <div style="font-size:9px;font-weight:700;color:var(--t2);text-transform:uppercase;margin-top:2px">กล้ามเนื้อ kg</div>
+        </div>`:''}
+      </div>
     </div>`;
   }).join('');
 }
@@ -1375,6 +1611,291 @@ function renderProfileTab(){
     </div>`;
 }
 
+// ── CALORIE / FAT CHART ──────────────────────────
+function renderWeightChart(p){
+  const svg=document.getElementById('weightChartSvg');
+  if(!svg)return;
+  const isFat=chartTab==='fat';
+  const W=svg.clientWidth||320;
+  const H=isFat?200:216;
+  svg.setAttribute('height',H);
+
+  if(!isFat){
+    renderCalorieChart(p,svg,W,H);
+  }else{
+    renderFatChart(p,svg,W,H);
+  }
+}
+
+function renderCalorieChart(p,svg,W,H){
+  const PAD={top:4,right:46,bottom:20,left:32};
+  const targets=calcTargets(p);
+  const bmr=Math.round(calcBMR(p));
+  const tdee=targets.tdee;
+  const todayKey=fmtDate(new Date());
+
+  // All days with food logged, sorted oldest→newest
+  const allLogged=Object.entries(p.days||{})
+    .filter(([,day])=>(day.food||[]).length>0)
+    .sort(([a],[b])=>a<b?-1:1);
+
+  // Build records: last 10 logged + today if not already included
+  const recs=[...allLogged].slice(-10);
+  if(!recs.find(([d])=>d===todayKey)) recs.push([todayKey,(p.days||{})[todayKey]||{food:[]}]);
+  if(recs.length>10) recs.shift();
+
+  // Global index for record labels (1-based from all history)
+  const totalLogged=allLogged.length;
+  const firstIdx=totalLogged-recs.filter(([d])=>allLogged.find(([a])=>a===d)).length+1;
+
+  const rowH=26;
+  const chartH=PAD.top+recs.length*rowH+PAD.bottom;
+  svg.setAttribute('height',chartH);
+  const CW=W-PAD.left-PAD.right;
+  const calVals=recs.map(([,day])=>(day.food||[]).reduce((s,f)=>s+(f.kcal||0),0));
+  const maxV=Math.max(tdee*1.18,...calVals.filter(v=>v>0).map(v=>v*1.05));
+  const xForV=v=>PAD.left+(v/maxV)*CW;
+
+  let out='';
+  const xBmr=xForV(bmr),xTdee=xForV(tdee);
+  out+=`<line x1="${xBmr.toFixed(1)}" y1="${PAD.top}" x2="${xBmr.toFixed(1)}" y2="${chartH-PAD.bottom}" stroke="var(--red)" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>`;
+  out+=`<line x1="${xTdee.toFixed(1)}" y1="${PAD.top}" x2="${xTdee.toFixed(1)}" y2="${chartH-PAD.bottom}" stroke="#D4750A" stroke-width="1" stroke-dasharray="3,3" opacity="0.45"/>`;
+  const lblY=(chartH-PAD.bottom+12).toFixed(1);
+  out+=`<text x="${xBmr.toFixed(1)}" y="${lblY}" text-anchor="middle" font-size="8" fill="var(--red)" opacity="0.7" font-weight="700">BMR</text>`;
+  out+=`<text x="${xTdee.toFixed(1)}" y="${lblY}" text-anchor="middle" font-size="8" fill="#D4750A" opacity="0.7" font-weight="700">TDEE</text>`;
+
+  recs.forEach(([dateKey,dayData],i)=>{
+    const kcal=(dayData.food||[]).reduce((s,f)=>s+(f.kcal||0),0);
+    const isToday=dateKey===todayKey;
+    const globalIdx=allLogged.findIndex(([d])=>d===dateKey);
+    const lbl=isToday?'วันนี้':`${globalIdx>=0?globalIdx+1:firstIdx+i}`;
+    const y=PAD.top+i*rowH,midY=y+rowH/2,barTop=y+rowH*0.2,barH=rowH*0.6;
+    if(isToday) out+=`<rect x="${PAD.left}" y="${y}" width="${CW}" height="${rowH}" fill="var(--lime)" opacity="0.07" rx="3"/>`;
+    out+=`<text x="${(PAD.left-4).toFixed(1)}" y="${(midY+3.5).toFixed(1)}" text-anchor="end" font-size="${isToday?8:9}" font-weight="${isToday?'900':'500'}" fill="${isToday?'var(--lime)':'var(--t3)'}">${lbl}</text>`;
+    if(kcal>0){
+      const barW=xForV(kcal)-PAD.left;
+      const col=kcal<bmr?'var(--red)':kcal>tdee?'#D4750A':'var(--lime)';
+      out+=`<rect x="${PAD.left}" y="${barTop.toFixed(1)}" width="${Math.max(4,barW).toFixed(1)}" height="${barH.toFixed(1)}" rx="4" fill="${col}" opacity="${isToday?0.85:0.6}"/>`;
+      out+=`<text x="${Math.min(PAD.left+barW+4,W-2).toFixed(1)}" y="${(midY+3.5).toFixed(1)}" font-size="9" font-weight="800" fill="${col}">${kcal}</text>`;
+    }else{
+      out+=`<rect x="${PAD.left}" y="${barTop.toFixed(1)}" width="${CW}" height="${barH.toFixed(1)}" rx="4" fill="var(--line)" opacity="0.3"/>`;
+    }
+  });
+
+  svg.setAttribute('viewBox',`0 0 ${W} ${chartH}`);
+  svg.innerHTML=out;
+  const leg=document.getElementById('weightLegend');
+  if(leg)leg.innerHTML=`
+    <span style="display:flex;align-items:center;gap:4px"><svg width="10" height="10"><rect width="10" height="10" rx="2" fill="var(--lime)" opacity="0.8"/></svg>อยู่ในเป้า</span>
+    <span style="display:flex;align-items:center;gap:4px"><svg width="10" height="10"><rect width="10" height="10" rx="2" fill="#D4750A" opacity="0.8"/></svg>เกิน TDEE</span>
+    <span style="display:flex;align-items:center;gap:4px"><svg width="10" height="10"><rect width="10" height="10" rx="2" fill="var(--red)" opacity="0.8"/></svg>ต่ำกว่า BMR</span>`;
+}
+
+function renderFatChart(p,svg,W,H){
+  const PAD={top:22,right:14,bottom:22,left:14};
+  const CW=W-PAD.left-PAD.right;
+  const CH=H-PAD.top-PAD.bottom;
+  const targetV=p.targetFat;
+
+  const now=new Date();
+  const chartStartTs=new Date(now);chartStartTs.setDate(now.getDate()-14);
+  const chartEndTs=new Date(now);chartEndTs.setDate(now.getDate()+4);
+  const totalMs=chartEndTs-chartStartTs;
+  const xForTs=(ts)=>PAD.left+((ts-chartStartTs.getTime())/totalMs)*CW;
+  const todayTs=new Date(today()+'T12:00:00').getTime();
+
+  const hist=p.weightHistory||[];
+  const fatPts=hist
+    .filter(e=>e.f)
+    .map(e=>({ts:e.ts||new Date(e.date+'T12:00:00').getTime(),val:Number(e.f)}))
+    .filter(e=>e.ts>=chartStartTs.getTime())
+    .sort((a,b)=>a.ts-b.ts);
+
+  // Fallback to fatLog
+  const histDates=new Set(hist.filter(e=>e.f).map(e=>e.date));
+  Object.entries(p.fatLog||{}).sort().forEach(([d,v])=>{
+    if(!histDates.has(d)){
+      const ts=new Date(d+'T12:00:00').getTime();
+      if(ts>=chartStartTs.getTime())fatPts.push({ts,val:Number(v)});
+    }
+  });
+  fatPts.sort((a,b)=>a.ts-b.ts);
+
+  const allV=fatPts.map(e=>e.val);
+  if(targetV)allV.push(Number(targetV));
+  if(!allV.length)allV.push(20,25);
+  const vPad=(Math.max(...allV)-Math.min(...allV))*0.2||3;
+  const minV=Math.min(...allV)-vPad;
+  const maxV=Math.max(...allV)+vPad;
+  const vRange=maxV-minV||1;
+  const yForV=(v)=>PAD.top+CH-((v-minV)/vRange)*CH;
+  const pathStr=(pts)=>pts.map((pt,i)=>`${i===0?'M':'L'}${pt[0].toFixed(1)},${pt[1].toFixed(1)}`).join(' ');
+
+  let out='';
+
+  // Today vertical
+  const todayX=xForTs(todayTs);
+  out+=`<line x1="${todayX.toFixed(1)}" y1="${PAD.top}" x2="${todayX.toFixed(1)}" y2="${H-PAD.bottom}" stroke="var(--lime)" stroke-width="1" stroke-dasharray="3,3" opacity="0.3"/>`;
+
+  // Target line
+  if(targetV){
+    const ty=yForV(Number(targetV));
+    out+=`<line x1="${PAD.left}" y1="${ty.toFixed(1)}" x2="${W-PAD.right}" y2="${ty.toFixed(1)}" stroke="var(--red)" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>`;
+    out+=`<text x="${(W-PAD.right-3).toFixed(1)}" y="${(ty-4).toFixed(1)}" text-anchor="end" font-size="9" fill="var(--red)" opacity="0.7">เป้า ${targetV}%</text>`;
+  }
+
+  // Line + dots
+  const pts=fatPts.map(e=>[xForTs(e.ts),yForV(e.val),e.val]);
+  if(pts.length>1)out+=`<path d="${pathStr(pts)}" fill="none" stroke="var(--lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  pts.forEach(([x,y,v],i)=>{
+    const isLast=i===pts.length-1;
+    out+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${isLast?5:3}" fill="var(--lime)" stroke="var(--s1)" stroke-width="${isLast?2.5:1.5}"/>`;
+  });
+
+  // Last value pill
+  if(pts.length>0){
+    const [lx,ly,lv]=pts[pts.length-1];
+    const prevV=pts.length>1?pts[pts.length-2][2]:null;
+    const delta=prevV!=null?Math.round((lv-prevV)*10)/10:null;
+    const valTxt=lv.toFixed(1)+'%';
+    const deltaTxt=delta!=null&&delta!==0?(delta<0?` ↓${Math.abs(delta)}`:(` ↑${delta}`)):'';
+    const deltaCol=delta!=null?(delta<0?'var(--grn)':delta>0?'var(--red)':'var(--t2)'):'var(--t2)';
+    const bw=valTxt.length*7.5+18;
+    const bx=Math.min(Math.max(lx-bw/2,PAD.left),W-PAD.right-bw);
+    const by=ly<PAD.top+38?ly+10:ly-38;
+    out+=`<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${bw}" height="26" rx="13" fill="var(--lime)" opacity="0.13"/>`;
+    out+=`<text x="${(bx+bw/2).toFixed(1)}" y="${(by+17).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="800" fill="var(--lime)">${valTxt}</text>`;
+    if(deltaTxt)out+=`<text x="${(bx+bw/2).toFixed(1)}" y="${(by+28).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="800" fill="${deltaCol}">${deltaTxt}</text>`;
+  }else{
+    out+=`<text x="${(W/2).toFixed(1)}" y="${(H/2).toFixed(1)}" text-anchor="middle" font-size="12" fill="var(--t3)">บันทึก%ไขมันเพื่อดูกราฟ</text>`;
+  }
+
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.innerHTML=out;
+
+  const leg=document.getElementById('weightLegend');
+  if(leg)leg.innerHTML='';
+}
+
+function openLogWeight(){
+  const p=curProfile();
+  const todayW=(p.weightLog||{})[today()];
+  const todayF=(p.fatLog||{})[today()];
+  document.getElementById('logWeightVal').value=todayW||'';
+  document.getElementById('logFatVal').value=todayF||'';
+  document.getElementById('modalLogWeight').classList.add('show');
+}
+
+function saveWeight(){
+  const w=parseFloat(document.getElementById('logWeightVal').value);
+  const f=parseFloat(document.getElementById('logFatVal').value);
+  if(!w&&!f){showToast('กรอกน้ำหนักหรือ%ไขมันด้วย');return;}
+  if(w&&(w<20||w>300)){showToast('กรอกน้ำหนักให้ถูกต้อง');return;}
+  if(f&&(f<1||f>70)){showToast('กรอก%ไขมันให้ถูกต้อง');return;}
+  const p=curProfile();
+  // Update latest-per-day maps (used for chart)
+  if(w){if(!p.weightLog)p.weightLog={};p.weightLog[today()]=w;}
+  if(f){if(!p.fatLog)p.fatLog={};p.fatLog[today()]=f;}
+  // Accumulate full history (keeps every entry)
+  if(!p.weightHistory)p.weightHistory=[];
+  p.weightHistory.push({date:today(),w:w||null,f:f||null,ts:Date.now()});
+  if(p.weightHistory.length>50)p.weightHistory=p.weightHistory.slice(-50);
+  saveProfileData(p);
+  closeModal('modalLogWeight');
+  const msg=w&&f?`บันทึก ${w}kg · ${f}% ✓`:w?`บันทึก ${w} kg ✓`:`บันทึก ${f}% ✓`;
+  showToast(msg);
+  renderHome();
+}
+
+function setChartTab(tab){
+  chartTab=tab;
+  document.querySelectorAll('.chart-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(tab==='weight'?'tabWeight':'tabFat').classList.add('active');
+  const p=curProfile();if(p)renderWeightChart(p);
+}
+
+function getThisWeekKey(){
+  const d=new Date();
+  d.setDate(d.getDate()-d.getDay());
+  return fmtDate(d);
+}
+
+function calcWeeklyProjection(p){
+  // Returns { projectedWeight, weeklyChange, dailyDeficit, curWeight, isSurplus } or null
+  const d=getTodayData(p);
+  const eaten=d.food.reduce((s,f)=>s+f.kcal,0);
+  if(eaten===0)return null;
+  const targets=calcTargets(p);
+  const dailyDeficit=targets.tdee-eaten; // positive = deficit, negative = surplus
+  const sortedW=Object.entries(p.weightLog||{}).sort((a,b)=>a[0].localeCompare(b[0]));
+  const curWeight=sortedW.length?Number(sortedW[sortedW.length-1][1]):p.weight;
+  const weeklyChange=(dailyDeficit*7)/7700; // negative weeklyChange = weight gain
+  const projectedWeight=Math.round((curWeight-weeklyChange)*10)/10;
+  return{
+    projectedWeight,
+    weeklyChange:Math.round(Math.abs(weeklyChange)*10)/10,
+    dailyDeficit:Math.round(dailyDeficit),
+    curWeight,
+    isSurplus:dailyDeficit<0
+  };
+}
+
+function renderWeeklyGoalCard(p){
+  const el=document.getElementById('wgoalVals');if(!el)return;
+  const proj=calcWeeklyProjection(p);
+  if(!proj){
+    el.className='wgoal-cells';
+    el.innerHTML=`<div style="color:var(--t3);font-size:12px;text-align:center;padding:4px 0;grid-column:1/-1">บันทึกอาหารก่อนเพื่อดูเป้า</div>`;
+  }else{
+    const col=proj.isSurplus?'var(--red)':'var(--lime)';
+    const arrow=proj.isSurplus?'↑':'↓';
+    const defTxt=proj.isSurplus?`+${Math.abs(proj.dailyDeficit)}`:`${proj.dailyDeficit}`;
+    const defLbl=proj.isSurplus?'surplus/วัน':'deficit/วัน';
+    el.className='wgoal-cells';
+    el.innerHTML=`
+      <div class="wgoal-cell">
+        <div class="wgoal-cell-val" style="color:${col}">${proj.projectedWeight} kg</div>
+        <div class="wgoal-cell-lbl">น้ำหนัก 30 วัน</div>
+      </div>
+      <div class="wgoal-cell">
+        <div class="wgoal-cell-val" style="color:${col}">${arrow}${proj.weeklyChange} kg</div>
+        <div class="wgoal-cell-lbl">ต่อสัปดาห์</div>
+      </div>
+      <div class="wgoal-cell">
+        <div class="wgoal-cell-val" style="color:${col}">${defTxt} kcal</div>
+        <div class="wgoal-cell-lbl">${defLbl}</div>
+      </div>`;
+  }
+  // Target deficit row
+  const td=p.targetDeficit||null;
+  const tdEl=document.getElementById('targetDeficitDisplay');
+  const etaEl=document.getElementById('targetDeficitEta');
+  if(tdEl)tdEl.textContent=td?`${td} kcal/วัน ✏️`:`ตั้งเป้า deficit ✏️`;
+  if(etaEl&&td&&p.targetWeight){
+    const wlog=p.weightLog||{};const sorted=Object.keys(wlog).sort();
+    const curW=sorted.length?Number(wlog[sorted[sorted.length-1]]):p.weight;
+    const rem=Math.max(0,curW-Number(p.targetWeight));
+    if(rem>0){
+      const weeks=Math.round(rem*7700/(td*7));
+      etaEl.textContent=`→ ถึง ${p.targetWeight}kg ใน ~${weeks} สัปดาห์`;
+    }else etaEl.textContent='';
+  }else if(etaEl)etaEl.textContent='';
+}
+
+function editTargetDeficit(){
+  const p=curProfile();if(!p)return;
+  showInputModal('เป้า deficit ต่อวัน (kcal)',p.targetDeficit||500,100,1500,n=>{
+    p.targetDeficit=n;saveProfileData(p);renderHome();
+  });
+}
+
+function editWeeklyGoal(){
+  const p=curProfile();if(!p)return;
+  showInputModal('เป้าออกกำลังกายต่อสัปดาห์ (ครั้ง)',p.weeklyExGoal||5,1,14,n=>{
+    p.weeklyExGoal=n;saveProfileData(p);renderHome();
+  });
+}
+
 // ── GITHUB GIST SYNC ─────────────────────────────
 const GH={
   token:null,gistId:null,timer:null,_debounce:null,
@@ -1394,6 +1915,8 @@ const GH={
     const t=document.getElementById('syncText');
     if(d)d.className='sync-dot'+(dot?' '+dot:'');
     if(t)t.textContent=text;
+    const logo=document.getElementById('htLogo');
+    if(logo){logo.classList.remove('sync-on','sync-err','sync-spin');if(dot==='on')logo.classList.add('sync-on');else if(dot==='err')logo.classList.add('sync-err');else if(dot==='spin')logo.classList.add('sync-spin');}
   },
   updateUI(){
     const connected=!!(this.token&&this.gistId);
@@ -1403,7 +1926,7 @@ const GH={
     if(cw)cw.style.display=connected?'none':'block';
     if(sw)sw.style.display=connected?'block':'none';
     if(db)db.style.display=connected?'inline-block':'none';
-    if(!connected)this.setSyncUI('','ไม่ได้เชื่อมต่อ');
+    if(!connected){this.setSyncUI('','ไม่ได้เชื่อมต่อ');const logo=document.getElementById('htLogo');if(logo)logo.classList.remove('sync-on','sync-err','sync-spin');}
     this.showBanner(!connected);
   },
   startTimer(){
@@ -1537,6 +2060,22 @@ function deleteProfile(){
 }
 
 function closeModal(id){document.getElementById(id).classList.remove('show');}
+
+let _imCb=null,_imMin=0,_imMax=9999;
+function showInputModal(title,val,min,max,cb){
+  _imCb=cb;_imMin=min;_imMax=max;
+  document.getElementById('inputModalTitle').textContent=title;
+  const inp=document.getElementById('inputModalVal');
+  inp.value=val;inp.min=min;inp.max=max;
+  document.getElementById('modalInput').classList.add('show');
+  setTimeout(()=>{inp.focus();inp.select();},120);
+}
+function confirmInputModal(){
+  const n=parseInt(document.getElementById('inputModalVal').value);
+  if(isNaN(n)||n<_imMin||n>_imMax){showToast(`กรอก ${_imMin}–${_imMax}`);return;}
+  closeModal('modalInput');
+  if(_imCb)_imCb(n);
+}
 document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.modal').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show');});});});
 document.querySelectorAll('.modal').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show');});});
 
