@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#EDE8DF">
-<title>FitQuest</title>
+<meta name="theme-color" content="#3D5240">
+<title>GeeFit</title>
+<link rel="icon" id="appIcon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233D5240'/><text x='50' y='74' font-size='65' text-anchor='middle' fill='white' font-family='Georgia,serif' font-style='italic' font-weight='900'>G</text></svg>">
+<link rel="apple-touch-icon" id="appleTouchIcon" href="">
+<link rel="manifest" id="pwaManifest" href="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -31,12 +34,12 @@ body{font-family:'Nunito',-apple-system,'Helvetica Neue',sans-serif;background:v
 /* ── SECTION ───────────────────────────────────── */
 .sec{border-top:1px solid var(--line);padding:16px}
 .sec:first-child{border-top:none}
-.sec-lbl{font-size:14px;font-style:italic;font-family:Georgia,'Times New Roman',serif;color:var(--text);margin-bottom:12px;font-weight:normal;display:flex;justify-content:space-between;align-items:center}
+.sec-lbl{font-size:13px;font-weight:800;font-family:'Nunito',sans-serif;color:var(--text);margin-bottom:12px;letter-spacing:-.2px;display:flex;justify-content:space-between;align-items:center}
 
 /* ── PROFILE SELECT ────────────────────────────── */
 #profileSelect{min-height:100dvh;display:flex;flex-direction:column;padding:calc(var(--st)+40px) 20px calc(32px+var(--sb))}
 .ps-logo{margin-bottom:40px}
-.ps-logo-title{font-size:36px;font-weight:900;letter-spacing:-1px;color:var(--lime);font-family:Georgia,'Times New Roman',serif;font-style:italic}
+.ps-logo-title{font-size:36px;font-weight:900;letter-spacing:-1px;color:var(--lime);font-family:'Nunito',sans-serif}
 .ps-logo-sub{font-size:11px;color:var(--t2);margin-top:4px;letter-spacing:.8px;text-transform:uppercase}
 .profile-card{border:1px solid var(--line);border-radius:22px;padding:14px 16px;display:flex;align-items:center;gap:14px;cursor:pointer;margin-bottom:8px;transition:all .15s;background:var(--s1)}
 .profile-card:active{border-color:var(--lime);transform:scale(.99)}
@@ -53,7 +56,7 @@ body{font-family:'Nunito',-apple-system,'Helvetica Neue',sans-serif;background:v
 .setup-prog{display:flex;gap:4px;margin-bottom:28px}
 .sp-dot{height:3px;flex:1;background:var(--line);border-radius:2px;transition:background .3s}
 .sp-dot.on{background:var(--lime)}
-.setup-title{font-size:26px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px;font-family:Georgia,'Times New Roman',serif;font-style:italic}
+.setup-title{font-size:26px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px;font-family:'Nunito',sans-serif}
 .setup-sub{font-size:13px;color:var(--t2);margin-bottom:22px;line-height:1.5}
 .s-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
 .s-opt{background:var(--s1);border:1.5px solid var(--line);border-radius:22px;padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .15s}
@@ -97,7 +100,7 @@ select.form-input option{background:var(--s2)}
 
 /* ── HOME HERO ─────────────────────────────────── */
 .home-top{background:var(--lime);color:#fff;padding:16px 16px 18px;border-bottom:none;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:0 0 28px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
-.ht-logo{width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;letter-spacing:.5px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-style:italic;flex-shrink:0;box-shadow:0 0 0 2.5px rgba(255,255,255,.2);transition:box-shadow .4s}
+.ht-logo{width:42px;height:42px;background:rgba(255,255,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;letter-spacing:.5px;color:#fff;font-family:'Nunito',sans-serif;flex-shrink:0;box-shadow:0 0 0 2.5px rgba(255,255,255,.2);transition:box-shadow .4s}
 .ht-logo.sync-on{box-shadow:0 0 0 2.5px rgba(255,255,255,.9)}
 .ht-logo.sync-err{box-shadow:0 0 0 2.5px rgba(220,80,80,.85)}
 .ht-logo.sync-spin{animation:logo-ring 1.1s ease-in-out infinite}
@@ -135,7 +138,7 @@ select.form-input option{background:var(--s2)}
 
 /* ── CALENDAR ──────────────────────────────────── */
 .cal-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.cal-month{font-size:14px;font-style:italic;font-family:Georgia,'Times New Roman',serif;color:var(--text)}
+.cal-month{font-size:14px;font-weight:800;font-family:'Nunito',sans-serif;color:var(--text)}
 .cal-streak{font-size:11px;color:var(--lime);font-weight:700}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
 .cal-dn{font-size:9px;color:var(--t3);text-align:center;padding:2px 0;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
@@ -162,7 +165,8 @@ select.form-input option{background:var(--s2)}
 .ex-row{display:flex;align-items:center;gap:12px;padding:12px 0;cursor:pointer;border-bottom:1px solid var(--line)}
 .ex-row:last-of-type{border-bottom:none}
 .ex-row:active{opacity:.7}
-.ex-icon{font-size:20px;width:32px;text-align:center;flex-shrink:0}
+.ex-icon{width:34px;height:34px;border-radius:10px;background:rgba(61,82,64,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--lime)}
+.ex-icon svg{width:20px;height:20px;display:block}
 .ex-info{flex:1}
 .ex-name{font-size:15px;font-weight:700;letter-spacing:-.2px}
 .ex-sub{font-size:11px;color:var(--t2);margin-top:2px}
@@ -249,7 +253,7 @@ select.form-input option{background:var(--s2)}
 /* ── PROFILE TAB ───────────────────────────────── */
 .prof-hero{padding:20px;text-align:center;border-bottom:1px solid var(--line)}
 .prof-emoji{font-size:40px;margin-bottom:8px}
-.prof-name{font-size:22px;font-weight:900;letter-spacing:-.5px;font-family:Georgia,'Times New Roman',serif;font-style:italic}
+.prof-name{font-size:22px;font-weight:900;letter-spacing:-.5px;font-family:'Nunito',sans-serif}
 .prof-goal-badge{display:inline-block;margin-top:6px;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px}
 .prof-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:16px}
 .ps-cell{padding:12px 0;text-align:center}
@@ -276,9 +280,9 @@ select.form-input option{background:var(--s2)}
 /* ── MODAL ─────────────────────────────────────── */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:300;display:none;align-items:flex-end;justify-content:center}
 .modal.show{display:flex}
-.modal-sheet{background:var(--s1);border-radius:28px 28px 0 0;padding:14px 20px calc(20px+var(--sb));width:100%;max-width:430px;max-height:88dvh;overflow-y:auto}
+.modal-sheet{background:var(--s1);border-radius:24px 24px 0 0;padding:16px 28px calc(28px+var(--sb));width:calc(100% - 20px);max-width:430px;max-height:88dvh;overflow-y:auto;margin:0 auto}
 .modal-handle{width:36px;height:4px;background:var(--t3);border-radius:2px;margin:0 auto 16px}
-.modal-title{font-size:18px;font-weight:900;margin-bottom:14px;font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--text)}
+.modal-title{font-size:18px;font-weight:900;margin-bottom:14px;font-family:'Nunito',sans-serif;color:var(--text)}
 
 /* ── DURATION PICKER ───────────────────────────── */
 .dur-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
@@ -365,7 +369,7 @@ select.form-input option{background:var(--s2)}
     <div class="sec">
       <div class="sec-lbl">วันนี้ <span id="checkinCount" style="font-style:normal;font-family:inherit;font-size:11px;color:var(--t2)">0/3</span><span class="wex-badge">· วีคนี้ <span id="weeklyExCount">0</span>/<span class="wex-goal-edit" id="weeklyExGoalDisplay" onclick="editWeeklyGoal()">5</span> ครั้ง</span></div>
       <div class="ex-row" id="tileWeight" onclick="openExercise('weight')">
-        <div class="ex-icon">🏋️</div>
+        <div class="ex-icon"><svg viewBox="0 0 22 12" fill="currentColor"><rect x="0" y="4" width="2.5" height="4" rx="1.25"/><rect x="2.5" y="2" width="3" height="8" rx="1.5"/><rect x="5.5" y="5" width="11" height="2" rx="1"/><rect x="16.5" y="2" width="3" height="8" rx="1.5"/><rect x="19.5" y="4" width="2.5" height="4" rx="1.25"/></svg></div>
         <div class="ex-info">
           <div class="ex-name">เวท</div>
           <div class="ex-sub" id="weightSub">แตะเพื่อบันทึก</div>
@@ -373,7 +377,7 @@ select.form-input option{background:var(--s2)}
         <div class="ex-badge todo" id="weightBadge">+</div>
       </div>
       <div class="ex-row" id="tileCardio" onclick="openExercise('cardio')">
-        <div class="ex-icon">🏃</div>
+        <div class="ex-icon"><svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="3" r="2.2" fill="currentColor" stroke="none"/><path d="M9 6 L6 11 L4 17"/><path d="M6 11 L10 15"/><path d="M9 6 L13 9"/><path d="M7.5 8.5 L3 8.5"/></svg></div>
         <div class="ex-info">
           <div class="ex-name">คาร์ดิโอ</div>
           <div class="ex-sub" id="cardioSub">แตะเพื่อบันทึก</div>
@@ -381,7 +385,7 @@ select.form-input option{background:var(--s2)}
         <div class="ex-badge todo" id="cardioBadge">+</div>
       </div>
       <div class="water-row" id="waterCheckin" onclick="toggleWater()">
-        <div class="ex-icon">💧</div>
+        <div class="ex-icon"><svg viewBox="0 0 14 18" fill="currentColor"><path d="M7 1C5 4 1 9 1 12.5a6 6 0 0012 0C13 9 9 4 7 1z"/></svg></div>
         <div class="ex-info">
           <div class="ex-name">ดื่มน้ำเพียงพอ</div>
           <div class="ex-sub" id="waterSub">แตะเมื่อดื่มน้ำครบแล้ว</div>
@@ -473,6 +477,7 @@ select.form-input option{background:var(--s2)}
       <div class="prof-name" id="profileName"></div>
       <div class="prof-goal-badge" id="profileGoalBadge"></div>
       <div class="prof-stats" id="profileStats"></div>
+    <button class="btn-sm btn-lime" style="margin-top:12px;font-size:12px;padding:6px 18px" onclick="openEditGoals()">✏️ แก้เป้าหมาย</button>
     </div>
     <div class="sec" id="goalTargetCard" style="display:none">
       <div class="sec-lbl">เป้าหมาย</div>
@@ -541,6 +546,40 @@ select.form-input option{background:var(--s2)}
     <div class="btn-row">
       <button class="btn btn-outline" onclick="closeModal('modalExercise')">ยกเลิก</button>
       <button class="btn btn-lime" onclick="confirmExercise()">บันทึก ✓</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: EDIT GOALS -->
+<div class="modal" id="modalEditGoals">
+  <div class="modal-sheet" style="overflow-y:auto;max-height:90dvh">
+    <div class="modal-handle"></div>
+    <div class="modal-title">แก้เป้าหมาย</div>
+    <div class="form-group">
+      <label class="form-lbl">เป้าหมาย</label>
+      <div style="display:flex;flex-direction:column;gap:6px" id="egGoalOpts"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-lbl">ระดับกิจกรรม</label>
+      <div style="display:flex;flex-direction:column;gap:6px" id="egActivityOpts"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-lbl">น้ำหนัก (kg)</label>
+        <input class="form-input" id="egWeight" type="number" inputmode="decimal" placeholder="เช่น 75">
+      </div>
+      <div class="form-group">
+        <label class="form-lbl">ส่วนสูง (cm)</label>
+        <input class="form-input" id="egHeight" type="number" inputmode="decimal" placeholder="เช่น 175">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-lbl">อายุ</label>
+      <input class="form-input" id="egAge" type="number" inputmode="numeric" placeholder="เช่น 28" style="max-width:140px">
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="closeModal('modalEditGoals')">ยกเลิก</button>
+      <button class="btn btn-lime" onclick="saveGoalEdits()">บันทึก ✓</button>
     </div>
   </div>
 </div>
@@ -774,6 +813,66 @@ const FOOD_DB=[
   {name:'แกงส้ม',unit:'ชาม',kcal:180,c:15,p:18,f:5},
   {name:'ข้าวหน้าเป็ด',unit:'จาน',kcal:500,c:62,p:30,f:14},
   {name:'ขนมจีน',unit:'จาน',kcal:350,c:60,p:12,f:6},
+  // ── ข้าว/แป้ง ──
+  {name:'ข้าวกล้อง',unit:'ทัพพี',kcal:110,c:23,p:3,f:1},
+  {name:'ผัดไทย',unit:'จาน',kcal:500,c:68,p:22,f:16},
+  {name:'สปาเกตตี้',unit:'จาน',kcal:380,c:68,p:14,f:6},
+  {name:'ราเมน',unit:'ชาม',kcal:450,c:60,p:18,f:14},
+  {name:'มันเทศ',unit:'หัวกลาง (150g)',kcal:130,c:30,p:2,f:0},
+  {name:'ฟักทอง',unit:'ถ้วย',kcal:50,c:12,p:2,f:0},
+  {name:'ข้าวโพด',unit:'ฝัก',kcal:120,c:27,p:4,f:2},
+  // ── เนื้อสัตว์/โปรตีน ──
+  {name:'ทูน่ากระป๋อง',unit:'กระป๋อง (140g)',kcal:150,c:0,p:30,f:3},
+  {name:'แซลมอน',unit:'150g',kcal:280,c:0,p:36,f:14},
+  {name:'กุ้งต้ม',unit:'100g',kcal:99,c:0,p:21,f:1},
+  {name:'สันในหมู',unit:'150g',kcal:240,c:0,p:38,f:9},
+  {name:'หมูสามชั้น',unit:'100g',kcal:320,c:0,p:16,f:28},
+  {name:'หมูสับ',unit:'100g',kcal:263,c:0,p:17,f:22},
+  {name:'อกเป็ด',unit:'150g',kcal:250,c:0,p:32,f:13},
+  {name:'ไส้กรอก',unit:'แท่ง',kcal:180,c:2,p:7,f:16},
+  {name:'เบคอน',unit:'3 แผ่น (30g)',kcal:130,c:0,p:9,f:10},
+  {name:'แฮม',unit:'2 แผ่น (40g)',kcal:60,c:1,p:9,f:2},
+  {name:'คั่วกลิ้งหมู',unit:'จาน',kcal:350,c:8,p:26,f:24},
+  {name:'ไข่พะโล้',unit:'ฟอง',kcal:130,c:8,p:8,f:7},
+  {name:'อกไก่อบ',unit:'150g',kcal:185,c:0,p:38,f:4},
+  // ── ผัก ──
+  {name:'คะน้าหมูกรอบ',unit:'จาน',kcal:320,c:10,p:18,f:22},
+  {name:'ถั่วแขกผัด',unit:'จาน',kcal:100,c:10,p:4,f:5},
+  {name:'เห็ดนางฟ้าผัด',unit:'จาน',kcal:90,c:8,p:4,f:5},
+  {name:'ยำวุ้นเส้น',unit:'จาน',kcal:180,c:28,p:8,f:4},
+  // ── นม/ไข่/ไขมัน ──
+  {name:'ชีส',unit:'แผ่น (20g)',kcal:70,c:1,p:5,f:5},
+  {name:'เนย',unit:'ช้อนชา (5g)',kcal:36,c:0,p:0,f:4},
+  {name:'อะโวคาโด',unit:'ลูก',kcal:230,c:12,p:3,f:21},
+  {name:'กรีกโยเกิร์ต',unit:'ถ้วย (200g)',kcal:130,c:8,p:17,f:4},
+  {name:'คอทเทจชีส',unit:'ถ้วย (200g)',kcal:160,c:6,p:24,f:4},
+  {name:'ไข่ขาว',unit:'3 ฟอง',kcal:52,c:1,p:11,f:0},
+  // ── ผลไม้ ──
+  {name:'ส้ม',unit:'ลูก',kcal:62,c:15,p:1,f:0},
+  {name:'แตงโม',unit:'2 ชิ้น (200g)',kcal:60,c:15,p:1,f:0},
+  {name:'สับปะรด',unit:'ถ้วย',kcal:83,c:22,p:1,f:0},
+  {name:'สตรอว์เบอร์รี่',unit:'ถ้วย',kcal:49,c:12,p:1,f:0},
+  {name:'องุ่น',unit:'ถ้วย',kcal:104,c:27,p:1,f:0},
+  {name:'มะพร้าว (เนื้อ)',unit:'100g',kcal:354,c:15,p:3,f:33},
+  {name:'น้ำมะพร้าว',unit:'แก้ว (250ml)',kcal:46,c:9,p:2,f:0},
+  // ── เครื่องดื่ม ──
+  {name:'ชานมไข่มุก',unit:'แก้ว (500ml)',kcal:380,c:72,p:4,f:8},
+  {name:'ชาเขียว (ไม่หวาน)',unit:'แก้ว',kcal:3,c:0,p:0,f:0},
+  {name:'เครื่องดื่มชูกำลัง',unit:'กระป๋อง',kcal:110,c:28,p:0,f:0},
+  {name:'น้ำผึ้ง',unit:'ช้อนโต๊ะ',kcal:64,c:17,p:0,f:0},
+  {name:'เบียร์',unit:'กระป๋อง (330ml)',kcal:145,c:13,p:1,f:0},
+  // ── ขนม/ของว่าง ──
+  {name:'ข้าวเกรียบกุ้ง',unit:'ถุงเล็ก (30g)',kcal:150,c:20,p:2,f:7},
+  {name:'มันฝรั่งทอด',unit:'ถุงเล็ก (30g)',kcal:160,c:15,p:2,f:10},
+  {name:'โดนัท',unit:'ชิ้น',kcal:250,c:33,p:4,f:12},
+  {name:'ไอศกรีมวนิลา',unit:'ช้อนโต๊ะ (100g)',kcal:200,c:24,p:3,f:11},
+  {name:'เค้กช็อกโกแลต',unit:'ชิ้น (100g)',kcal:380,c:50,p:5,f:18},
+  {name:'คุกกี้',unit:'ชิ้น (15g)',kcal:70,c:9,p:1,f:3},
+  {name:'มะขามหวาน',unit:'30g',kcal:80,c:21,p:1,f:0},
+  // ── อาหารเสริม ──
+  {name:'เวย์โปรตีน',unit:'ช้อน (30g)',kcal:120,c:3,p:25,f:2},
+  {name:'ครีเอทีน',unit:'ช้อนชา (5g)',kcal:0,c:0,p:0,f:0},
+  {name:'BCAA',unit:'ช้อน (10g)',kcal:40,c:0,p:10,f:0},
 ];
 
 const EX_RATES={weight:{xpPerMin:3,burnPerMin:4},cardio:{xpPerMin:2.5,burnPerMin:7}};
@@ -783,8 +882,45 @@ function calcBMR(p){
   return p.gender==='male'?10*p.weight+6.25*p.height-5*p.age+5:10*p.weight+6.25*p.height-5*p.age-161;
 }
 function calcTDEE(p){
+  if(p.tdeeOverride&&p.tdeeOverride>1000)return p.tdeeOverride;
   const f={sedentary:1.2,light:1.375,moderate:1.55,active:1.725,very_active:1.9};
   return Math.round(calcBMR(p)*(f[p.activity]||1.55));
+}
+let _egGoal='',_egActivity='';
+function openEditGoals(){
+  const p=curProfile();if(!p)return;
+  _egGoal=p.goal;_egActivity=p.activity;
+  document.getElementById('egWeight').value=p.weight;
+  document.getElementById('egHeight').value=p.height;
+  document.getElementById('egAge').value=p.age;
+  renderEgOpts();
+  document.getElementById('modalEditGoals').classList.add('show');
+}
+function renderEgOpts(){
+  const goals=[{v:'fat_loss',icon:'🔥',t:'ลดไขมัน',s:'แคลต่ำกว่า TDEE'},{v:'muscle_gain',icon:'💪',t:'เพิ่มกล้าม',s:'แคลสูงกว่า TDEE'},{v:'maintenance',icon:'⚖️',t:'คงสภาพ',s:'สมดุล'}];
+  document.getElementById('egGoalOpts').innerHTML=goals.map(g=>`<div class="s-opt${_egGoal===g.v?' on':''}" onclick="_egGoal='${g.v}';renderEgOpts()" style="padding:10px 14px"><div class="s-opt-icon">${g.icon}</div><div><div class="s-opt-title">${g.t}</div><div class="s-opt-sub">${g.s}</div></div></div>`).join('');
+  const acts=[{v:'sedentary',t:'นั่งทำงาน',s:'ออกน้อยมาก ×1.2'},{v:'light',t:'ออกเบาๆ',s:'1–3 วัน/สัปดาห์ ×1.375'},{v:'moderate',t:'ปานกลาง',s:'3–5 วัน/สัปดาห์ ×1.55'},{v:'active',t:'หนัก',s:'6–7 วัน/สัปดาห์ ×1.725'},{v:'very_active',t:'หนักมาก',s:'2× ต่อวัน ×1.9'}];
+  document.getElementById('egActivityOpts').innerHTML=acts.map(a=>`<div class="s-opt${_egActivity===a.v?' on':''}" onclick="_egActivity='${a.v}';renderEgOpts()" style="padding:10px 14px"><div><div class="s-opt-title">${a.t}</div><div class="s-opt-sub">${a.s}</div></div></div>`).join('');
+}
+function saveGoalEdits(){
+  const p=curProfile();if(!p)return;
+  const w=parseFloat(document.getElementById('egWeight').value);
+  const h=parseFloat(document.getElementById('egHeight').value);
+  const a=parseInt(document.getElementById('egAge').value);
+  if(!_egGoal||!_egActivity){showToast('เลือกเป้าหมายและระดับกิจกรรมด้วย');return;}
+  if(isNaN(w)||w<20||w>300){showToast('น้ำหนัก 20–300 kg');return;}
+  if(isNaN(h)||h<100||h>250){showToast('ส่วนสูง 100–250 cm');return;}
+  if(isNaN(a)||a<10||a>99){showToast('อายุ 10–99 ปี');return;}
+  p.goal=_egGoal;p.activity=_egActivity;p.weight=w;p.height=h;p.age=a;
+  saveProfileData(p);closeModal('modalEditGoals');
+  renderProfileTab();renderHome();
+  showToast('บันทึกเป้าหมายแล้ว ✓');
+}
+function editTDEE(){
+  const p=curProfile();if(!p)return;
+  showInputModal('TDEE ของคุณ (kcal) · 0 = คำนวณอัตโนมัติ',p.tdeeOverride||calcTDEE(p),0,6000,n=>{
+    p.tdeeOverride=n>1000?n:null;saveProfileData(p);renderHome();
+  });
 }
 function calcTargets(p){
   const tdee=calcTDEE(p);
@@ -1083,17 +1219,17 @@ function renderWeeklyGoalsBox(p){
       ${defSign}${Math.abs(total)} kcal/วัน
       <span style="font-size:9px;font-weight:600;color:var(--t2)"> deficit เป้า ✏️</span>
     </div>
-    <div style="margin-bottom:7px" onclick="editWkGoal('weight')" style="cursor:pointer">
+    <div style="margin-bottom:7px;cursor:pointer" onclick="editWkGoal('weight')">
       <div class="ht-bar-row">
-        <span style="font-size:10px;font-weight:700;color:var(--t2);cursor:pointer">🏋️ เวทสัปดาห์นี้</span>
-        <span style="font-size:10px;font-weight:900;color:var(--text);cursor:pointer">${act.weightMins}/${wMins} นาที</span>
+        <span style="font-size:10px;font-weight:700;color:var(--t2);display:flex;align-items:center;gap:4px"><svg width="13" height="8" viewBox="0 0 22 12" fill="var(--lime)"><rect x="0" y="4" width="2.5" height="4" rx="1.25"/><rect x="2.5" y="2" width="3" height="8" rx="1.5"/><rect x="5.5" y="5" width="11" height="2" rx="1"/><rect x="16.5" y="2" width="3" height="8" rx="1.5"/><rect x="19.5" y="4" width="2.5" height="4" rx="1.25"/></svg> เวทสัปดาห์นี้</span>
+        <span style="font-size:10px;font-weight:900;color:var(--text)">${act.weightMins}/<span style="color:var(--lime)">${wMins}</span> นาที ✏️</span>
       </div>
-      <div class="ht-bar-track" style="cursor:pointer"><div class="ht-bar-fill" style="width:${wPct100}%;background:#7BC8FF"></div></div>
+      <div class="ht-bar-track"><div class="ht-bar-fill" style="width:${wPct100}%;background:#7BC8FF"></div></div>
     </div>
-    <div onclick="editWkGoal('cardio')" style="cursor:pointer">
+    <div style="cursor:pointer" onclick="editWkGoal('cardio')">
       <div class="ht-bar-row">
-        <span style="font-size:10px;font-weight:700;color:var(--t2)">🏃 คาร์ดิโอสัปดาห์นี้</span>
-        <span style="font-size:10px;font-weight:900;color:var(--text)">${act.cardioMins}/${cMins} นาที</span>
+        <span style="font-size:10px;font-weight:700;color:var(--t2);display:flex;align-items:center;gap:4px"><svg width="10" height="13" viewBox="0 0 16 22" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="3" r="2.2" fill="var(--lime)" stroke="none"/><path d="M9 6 L6 11 L4 17"/><path d="M6 11 L10 15"/><path d="M9 6 L13 9"/><path d="M7.5 8.5 L3 8.5"/></svg> คาร์ดิโอสัปดาห์นี้</span>
+        <span style="font-size:10px;font-weight:900;color:var(--text)">${act.cardioMins}/<span style="color:var(--lime)">${cMins}</span> นาที ✏️</span>
       </div>
       <div class="ht-bar-track"><div class="ht-bar-fill" style="width:${cPct100}%;background:#FF9F45"></div></div>
     </div>`;
@@ -1168,7 +1304,8 @@ function renderDeficitCard(p,d){
   const netDeficit=goalKcal-eaten+Math.round(burnEx);
   const pct=Math.min(100,Math.round(eaten/goalKcal*100));
   const barColor=pct>100?'var(--red)':pct>80?'var(--lime)':'var(--grn)';
-  document.getElementById('dcTdeeLabel').textContent=`TDEE ${targets.tdee} kcal`;
+  const isOvr=p.tdeeOverride>1000;
+  document.getElementById('dcTdeeLabel').innerHTML=`<span onclick="editTDEE()" style="cursor:pointer;${isOvr?'color:var(--lime);font-weight:800;':''}">${isOvr?'⚙️ ':''}TDEE ${targets.tdee} kcal ✏️</span>`;
   document.getElementById('dcBar').style.width=pct+'%';
   document.getElementById('dcBar').style.background=barColor;
   document.getElementById('dcEaten').textContent=eaten;
@@ -1229,9 +1366,9 @@ function renderYesterdayCard(p){
   if(!dayHasCheckin(ydata)){
     items.push({ico:'—',msg:'ไม่มีการเช็คอินเลยเมื่อวาน',fix:'วันนี้ทำอย่างน้อย 1 ข้อนะ'});
   }else{
-    if(ydata.weight&&ydata.weight.done)items.push({ico:'🏋️',msg:`เวท ${ydata.weight.mins} นาที ✓`,fix:''});
+    if(ydata.weight&&ydata.weight.done)items.push({ico:'🏋',msg:`เวท ${ydata.weight.mins} นาที ✓`,fix:''});
     if(ydata.cardio&&ydata.cardio.done)items.push({ico:'🏃',msg:`คาร์ดิโอ ${ydata.cardio.mins} นาที ✓`,fix:''});
-    if(ydata.water)items.push({ico:'💧',msg:'ดื่มน้ำครบ ✓',fix:''});
+    if(ydata.water)items.push({ico:'○',msg:'ดื่มน้ำครบ ✓',fix:''});
   }
   if(eaten>0){
     const deficit=targets.kcal-eaten;
@@ -1253,7 +1390,9 @@ let currentExType=null;let selectedMins=30;
 
 function openExercise(type){
   currentExType=type;selectedMins=30;
-  document.getElementById('exModalTitle').textContent=type==='weight'?'🏋️ เวท':'🏃 คาร์ดิโอ';
+  const icoW=`<svg width="22" height="14" viewBox="0 0 22 12" fill="var(--lime)" style="vertical-align:middle;margin-right:8px"><rect x="0" y="4" width="2.5" height="4" rx="1.25"/><rect x="2.5" y="2" width="3" height="8" rx="1.5"/><rect x="5.5" y="5" width="11" height="2" rx="1"/><rect x="16.5" y="2" width="3" height="8" rx="1.5"/><rect x="19.5" y="4" width="2.5" height="4" rx="1.25"/></svg>`;
+  const icoC=`<svg width="14" height="18" viewBox="0 0 16 22" fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:8px"><circle cx="10" cy="3" r="2.2" fill="var(--lime)" stroke="none"/><path d="M9 6 L6 11 L4 17"/><path d="M6 11 L10 15"/><path d="M9 6 L13 9"/><path d="M7.5 8.5 L3 8.5"/></svg>`;
+  document.getElementById('exModalTitle').innerHTML=(type==='weight'?icoW+'เวท':icoC+'คาร์ดิโอ');
   document.getElementById('customMins').value='';
   document.getElementById('exKcalOverride').value='';
   renderDurGrid(30);
@@ -2078,6 +2217,23 @@ function confirmInputModal(){
 }
 document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.modal').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show');});});});
 document.querySelectorAll('.modal').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show');});});
+
+// ── PWA ICON ──────────────────────────────────────────────────
+(function(){
+  try{
+    const sz=512,c=document.createElement('canvas');c.width=c.height=sz;
+    const ctx=c.getContext('2d');
+    const r=sz*0.2;ctx.beginPath();ctx.moveTo(r,0);ctx.lineTo(sz-r,0);ctx.quadraticCurveTo(sz,0,sz,r);ctx.lineTo(sz,sz-r);ctx.quadraticCurveTo(sz,sz,sz-r,sz);ctx.lineTo(r,sz);ctx.quadraticCurveTo(0,sz,0,sz-r);ctx.lineTo(0,r);ctx.quadraticCurveTo(0,0,r,0);ctx.closePath();
+    ctx.fillStyle='#3D5240';ctx.fill();
+    ctx.fillStyle='#fff';ctx.font='italic 900 '+(sz*0.6)+'px Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('G',sz/2,sz/2+sz*0.04);
+    const url=c.toDataURL('image/png');
+    const ai=document.getElementById('appleTouchIcon');if(ai)ai.href=url;
+    // inject manifest so iOS/Android can install as PWA
+    const mf={name:'GeeFit',short_name:'GeeFit',start_url:'.',display:'standalone',background_color:'#EDE8DF',theme_color:'#3D5240',icons:[{src:url,sizes:'512x512',type:'image/png'}]};
+    const blob=new Blob([JSON.stringify(mf)],{type:'application/manifest+json'});
+    const ml=document.getElementById('pwaManifest');if(ml)ml.href=URL.createObjectURL(blob);
+  }catch(e){}
+})();
 
 (function init(){
   GH.init();
